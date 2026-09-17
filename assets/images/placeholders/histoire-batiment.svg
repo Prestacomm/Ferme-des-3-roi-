@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="700" viewBox="0 0 900 700" role="img" aria-label="La ferme familiale">
+  <defs>
+    <linearGradient id="g-histoire-batiment" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7A5A38"/>
+      <stop offset="100%" stop-color="#4F3A22"/>
+    </linearGradient>
+    <filter id="grain-histoire-batiment">
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" stitchTiles="stitch" result="noise"/>
+      <feColorMatrix in="noise" type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.05 0"/>
+    </filter>
+  </defs>
+  <rect width="900" height="700" fill="url(#g-histoire-batiment)"/>
+  <rect width="900" height="700" filter="url(#grain-histoire-batiment)"/>
+  <circle cx="450" cy="320" r="116" fill="#ffffff" fill-opacity="0.16"/>
+  <text x="50%" y="340" font-size="116" text-anchor="middle" dominant-baseline="central">🏡</text>
+  <rect x="0" y="636" width="900" height="64" fill="#1c1c14" fill-opacity="0.32"/>
+  <text x="50%" y="670" font-family="Arial, sans-serif" font-size="20" fill="#ffffff" text-anchor="middle" font-weight="600">La ferme familiale</text>
+</svg>

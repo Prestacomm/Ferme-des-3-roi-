@@ -1,0 +1,8 @@
+# Fichiers système
+.DS_Store
+
+# Réglages locaux Claude Code (spécifiques à cette machine)
+.claude/settings.local.json
+
+# Documents sources bruts (packaging, tarifs...) : pas nécessaires au site en ligne
+INFORMATION FERME DES 3 ROIS*/

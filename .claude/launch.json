@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "ferme-des-3-rois",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["/private/tmp/claude-501/-Users-lorick-Desktop-SITE-FERME-DES-3-ROIS-/45c8b335-5d63-4c04-a4b7-ea524f91ce26/scratchpad/serve.py"],
+      "port": 8934
+    }
+  ]
+}

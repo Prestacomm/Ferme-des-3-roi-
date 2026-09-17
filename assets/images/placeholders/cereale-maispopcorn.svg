@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600" role="img" aria-label="Maïs pop-corn">
+  <defs>
+    <linearGradient id="g-cereale-maispopcorn" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EAC24E"/>
+      <stop offset="100%" stop-color="#C08F25"/>
+    </linearGradient>
+    <filter id="grain-cereale-maispopcorn">
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" stitchTiles="stitch" result="noise"/>
+      <feColorMatrix in="noise" type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.05 0"/>
+    </filter>
+  </defs>
+  <rect width="800" height="600" fill="url(#g-cereale-maispopcorn)"/>
+  <rect width="800" height="600" filter="url(#grain-cereale-maispopcorn)"/>
+  <circle cx="400" cy="270" r="100" fill="#ffffff" fill-opacity="0.16"/>
+  <text x="50%" y="290" font-size="100" text-anchor="middle" dominant-baseline="central">🌽</text>
+  <rect x="0" y="536" width="800" height="64" fill="#1c1c14" fill-opacity="0.32"/>
+  <text x="50%" y="570" font-family="Arial, sans-serif" font-size="20" fill="#ffffff" text-anchor="middle" font-weight="600">Maïs pop-corn</text>
+</svg>

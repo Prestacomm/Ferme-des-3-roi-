@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-label="Tournesols de Beauce">
+  <defs>
+    <linearGradient id="g-hero-4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4C6329"/>
+      <stop offset="100%" stop-color="#33421A"/>
+    </linearGradient>
+    <filter id="grain-hero-4">
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" stitchTiles="stitch" result="noise"/>
+      <feColorMatrix in="noise" type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.05 0"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="900" fill="url(#g-hero-4)"/>
+  <rect width="1600" height="900" filter="url(#grain-hero-4)"/>
+  <circle cx="800" cy="420" r="150" fill="#ffffff" fill-opacity="0.16"/>
+  <text x="50%" y="440" font-size="150" text-anchor="middle" dominant-baseline="central">🌻</text>
+  <rect x="0" y="836" width="1600" height="64" fill="#1c1c14" fill-opacity="0.32"/>
+  <text x="50%" y="870" font-family="Arial, sans-serif" font-size="20" fill="#ffffff" text-anchor="middle" font-weight="600">Tournesols de Beauce</text>
+</svg>
