@@ -18,46 +18,88 @@ document.addEventListener('DOMContentLoaded', function () {
   window.addEventListener('scroll', onScrollHeader);
   onScrollHeader();
 
-  navToggle.addEventListener('click', function(){
-    var isOpen = mainNav.classList.toggle('open');
+  function setNavOpen(isOpen){
+    mainNav.classList.toggle('open', isOpen);
+    navToggle.classList.toggle('is-open', isOpen);
     navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    navToggle.setAttribute('aria-label', isOpen ? 'Fermer le menu' : 'Ouvrir le menu');
+  }
+
+  navToggle.addEventListener('click', function(){
+    setNavOpen(!mainNav.classList.contains('open'));
   });
   mainNav.querySelectorAll('a').forEach(function(link){
-    link.addEventListener('click', function(){
-      mainNav.classList.remove('open');
-      navToggle.setAttribute('aria-expanded', 'false');
-    });
+    link.addEventListener('click', function(){ setNavOpen(false); });
+  });
+  document.addEventListener('click', function(e){
+    if (mainNav.classList.contains('open') &&
+        !mainNav.contains(e.target) && !navToggle.contains(e.target)) {
+      setNavOpen(false);
+    }
+  });
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'Escape' && mainNav.classList.contains('open')) setNavOpen(false);
   });
 
-  /* ---------- Hero : slideshow automatique ---------- */
-  var slidesWrap = document.getElementById('heroSlides');
-  var slides = slidesWrap ? Array.prototype.slice.call(slidesWrap.querySelectorAll('.hero-slide')) : [];
-  var dotsWrap = document.getElementById('heroDots');
-  var current = 0;
-  var heroTimer;
+  /* ---------- Hero : la photo s'agrandit au fil du défilement ---------- */
+  var scrollHero = document.querySelector('.scroll-hero');
+  var heroFrame = document.getElementById('scrollHeroFrame');
+  var heroGradient = document.getElementById('scrollHeroGradient');
+  var heroLabel = document.getElementById('scrollHeroLabel');
+  var heroContent = document.getElementById('scrollHeroContent');
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  if (slides.length) {
-    slides.forEach(function(_, i){
-      var dot = document.createElement('button');
-      if (i === 0) dot.classList.add('is-active');
-      dot.setAttribute('aria-label', 'Aller à la photo ' + (i+1));
-      dot.addEventListener('click', function(){ goToSlide(i); resetHeroTimer(); });
-      dotsWrap.appendChild(dot);
-    });
+  if (scrollHero && heroFrame && !reduceMotion) {
+    var easeOutCubic = function(t){ return 1 - Math.pow(1 - t, 3); };
+    var clamp01 = function(v){ return Math.max(0, Math.min(1, v)); };
+    var ticking = false;
 
-    function goToSlide(index){
-      slides[current].classList.remove('is-active');
-      dotsWrap.children[current].classList.remove('is-active');
-      current = index;
-      slides[current].classList.add('is-active');
-      dotsWrap.children[current].classList.add('is-active');
+    function insetsFor(){
+      var mobile = window.innerWidth <= 720;
+      return mobile
+        ? { v: 9, h: 8, r: 20 }   // vh / vw / px sur mobile
+        : { v: 14, h: 18, r: 32 }; // vh / vw / px sur desktop
     }
-    function nextSlide(){ goToSlide((current + 1) % slides.length); }
-    function resetHeroTimer(){
-      clearInterval(heroTimer);
-      heroTimer = setInterval(nextSlide, 5500);
+
+    function renderHero(){
+      ticking = false;
+      var rect = scrollHero.getBoundingClientRect();
+      var scrollable = rect.height - window.innerHeight;
+      var raw = scrollable > 0 ? clamp01(-rect.top / scrollable) : (rect.top <= 0 ? 1 : 0);
+
+      var start = insetsFor();
+      var expand = easeOutCubic(clamp01(raw / 0.65));           // 0 -> 1 sur les 65% premiers
+      var reveal = clamp01((raw - 0.55) / 0.3);                  // 0 -> 1 entre 55% et 85%
+      var labelOpacity = 1 - clamp01(raw / 0.22);
+
+      var v = start.v * (1 - expand);
+      var h = start.h * (1 - expand);
+      var r = start.r * (1 - expand);
+      heroFrame.style.clipPath = 'inset(' + v + 'vh ' + h + 'vw round ' + r + 'px)';
+
+      if (heroGradient) heroGradient.style.opacity = String(0.35 + 0.55 * expand);
+      if (heroLabel){
+        heroLabel.style.opacity = String(labelOpacity);
+        heroLabel.style.transform = 'translateY(' + (-24 * (1 - labelOpacity)) + 'px)';
+        heroLabel.style.pointerEvents = labelOpacity < 0.05 ? 'none' : 'auto';
+      }
+      if (heroContent){
+        heroContent.style.opacity = String(reveal);
+        heroContent.style.transform = 'translateY(' + (28 * (1 - reveal)) + 'px)';
+      }
     }
-    resetHeroTimer();
+
+    function requestHeroRender(){
+      if (!ticking){ ticking = true; requestAnimationFrame(renderHero); }
+    }
+
+    window.addEventListener('scroll', requestHeroRender, { passive: true });
+    window.addEventListener('resize', requestHeroRender);
+    renderHero();
+  } else if (heroFrame) {
+    // Mouvement réduit : on affiche directement l'état final, sans animation.
+    heroFrame.style.clipPath = 'none';
+    if (heroContent){ heroContent.style.opacity = '1'; heroContent.style.transform = 'none'; }
   }
 
   /* ---------- Onglets (Produits + Recettes) ---------- */

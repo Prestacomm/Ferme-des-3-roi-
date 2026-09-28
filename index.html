@@ -21,13 +21,13 @@
 <header class="site-header" id="siteHeader">
   <div class="container">
     <a href="#accueil" class="brand">
-      <img src="assets/images/logo-horizontal.jpg" alt="Ferme des 3 Rois — Trésors de Beauce">
+      <img src="assets/images/logo-horizontal.png" alt="Ferme des 3 Rois — Trésors de Beauce">
     </a>
 
     <nav class="main-nav" id="mainNav">
-      <a href="#ferme">La Ferme</a>
-      <a href="#produits">Nos Produits</a>
-      <a href="#recettes">Recettes</a>
+      <a href="la-ferme.html">La Ferme</a>
+      <a href="nos-produits.html">Nos Produits</a>
+      <a href="recettes.html">Recettes</a>
       <a href="#contact">Où nous trouver</a>
     </nav>
 
@@ -45,40 +45,52 @@
 </header>
 
 <!-- ==========================================================
-     HERO — bandeau plein écran, photos déroulantes de l'exploitation
+     HERO — la photo s'agrandit au fil du défilement (scroll to expand)
+     Photos : "Wheat field" Benoît Deschasaux & "Combine harvesters"
+     Darla Hueske, libres de droits sous Licence Unsplash.
      ========================================================== -->
-<section class="hero" id="accueil">
-  <div class="hero-slides" id="heroSlides">
-    <div class="hero-slide is-active"><img src="assets/images/placeholders/hero-1.svg" alt="Champs de la Ferme des 3 Rois au Puiset"></div>
-    <div class="hero-slide"><img src="assets/images/placeholders/hero-2.svg" alt="Récolte à la ferme"></div>
-    <div class="hero-slide"><img src="assets/images/placeholders/hero-3.svg" alt="Bâtiments de l'exploitation"></div>
-    <div class="hero-slide"><img src="assets/images/placeholders/hero-4.svg" alt="Champs de tournesols de Beauce"></div>
-  </div>
+<section class="scroll-hero" id="accueil">
+  <div class="scroll-hero__pin" id="scrollHeroPin">
 
-  <div class="hero-dots" id="heroDots"></div>
+    <div class="scroll-hero__backdrop">
+      <img src="assets/images/hero/moissonneuses-champ-ble.jpg" alt="">
+    </div>
 
-  <div class="container">
-    <div class="hero-content">
-      <span class="hero-kicker"><span class="dot"></span> Producteurs bio · Janville-en-Beauce (28)</span>
-      <h1>Le bon sens paysan, <em>depuis 6 générations.</em></h1>
-      <p class="hero-lead">La Ferme des 3 Rois cultive et transforme, au cœur de la Beauce, des céréales, légumineuses, graines et légumes 100% biologiques — pour les professionnels comme pour les gourmands.</p>
+    <div class="scroll-hero__frame" id="scrollHeroFrame">
+      <img src="assets/images/hero/champ-ble-normandie.jpg" alt="Champ de blé au coucher du soleil, illustrant les cultures de la Ferme des 3 Rois">
+    </div>
 
-      <div class="hero-actions">
-        <a href="#produits" class="btn btn-primary">Découvrir nos produits</a>
-        <a href="#contact" class="btn btn-outline">Nous contacter</a>
-      </div>
+    <div class="scroll-hero__gradient" id="scrollHeroGradient"></div>
 
-      <div class="hero-ab">
-        <span class="ab-badge">AB</span>
-        <div class="hero-ab-text">
-          <strong>Certifié Agriculture Biologique — FR-BIO-01</strong>
-          100% de nos cultures conduites en agriculture biologique, contrôlées et certifiées en France.
+    <div class="scroll-hero__label" id="scrollHeroLabel">
+      <span class="script-tag">Depuis 6 générations</span>
+      <h2>Ferme des 3 Rois</h2>
+      <span class="scroll-hero__submark">× Trésors de Beauce</span>
+      <div class="scroll-cue"><span>Faites défiler</span><span class="line"></span></div>
+    </div>
+
+    <div class="container">
+      <div class="hero-content" id="scrollHeroContent">
+        <span class="hero-kicker"><span class="dot"></span> Producteurs bio · Janville-en-Beauce (28)</span>
+        <h1>Le bon sens paysan, <em>depuis 6 générations.</em></h1>
+        <p class="hero-lead">La Ferme des 3 Rois cultive et transforme, au cœur de la Beauce, des céréales, légumineuses, graines et légumes 100% biologiques — pour les professionnels comme pour les gourmands.</p>
+
+        <div class="hero-actions">
+          <a href="nos-produits.html" class="btn btn-primary">Découvrir nos produits</a>
+          <a href="#contact" class="btn btn-outline">Nous contacter</a>
+        </div>
+
+        <div class="hero-ab">
+          <span class="ab-badge">AB</span>
+          <div class="hero-ab-text">
+            <strong>Certifié Agriculture Biologique — FR-BIO-01</strong>
+            100% de nos cultures conduites en agriculture biologique, contrôlées et certifiées en France.
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <div class="scroll-cue"><span>Découvrir</span><span class="line"></span></div>
+  </div>
 </section>
 
 <!-- Bandeau double marque -->
@@ -91,250 +103,47 @@
 </div>
 
 <!-- ==========================================================
-     1. LA FERME — Histoire + Engagement
+     APERÇU DES 3 THÉMATIQUES — chacune a sa propre page
      ========================================================== -->
-<section id="ferme">
+<section>
   <div class="container">
 
-    <div class="numbered-head reveal">
-      <span class="num">01</span>
-      <div class="head-text">
-        <span class="eyebrow">La Ferme</span>
-        <h2>Une entreprise familiale, enracinée dans la terre beauceronne</h2>
-      </div>
+    <div class="section-head center reveal" style="margin-left:auto;margin-right:auto;">
+      <span class="eyebrow" style="justify-content:center;"></span>
+      <h2>La ferme, nos produits, nos recettes</h2>
+      <p>Trois univers à découvrir, chacun avec sa propre page.</p>
     </div>
 
-    <!-- Notre Histoire -->
-    <div class="histoire reveal">
-      <div class="histoire-media">
-        <img src="assets/images/real/histoire-portrait.jpg" alt="Jérémy et Jonathan, agriculteurs à la Ferme des 3 Rois">
-        <div class="stat-card">
-          <div><strong>6</strong><span>Générations</span></div>
-          <div><strong>142 ha</strong><span>d'exploitation</span></div>
+    <div class="theme-sections">
+      <article class="theme-feature reveal">
+        <div class="thumb"><img src="assets/images/real/histoire-portrait.jpg" alt="Jérémy et Jonathan, agriculteurs à la Ferme des 3 Rois"></div>
+        <div class="body">
+          <span class="eyebrow">La Ferme</span>
+          <h3>Une entreprise familiale, enracinée dans la terre beauceronne</h3>
+          <p>Depuis 6 générations, Jérémy et Jonathan cultivent 142 hectares en agriculture biologique au cœur de la Beauce. Découvrez notre histoire et nos engagements.</p>
+          <a href="la-ferme.html" class="btn btn-ghost">Découvrir notre histoire</a>
         </div>
-      </div>
-      <div class="histoire-body">
-        <span class="eyebrow" style="margin-bottom:6px;">Notre Histoire</span>
-        <h3>Du champ à l'assiette, une histoire de famille</h3>
-        <p>Entreprise familiale depuis 6 générations, la Ferme des 3 Rois est une exploitation de 142 hectares située au Puiset, en plein cœur de la Beauce (Centre-Val de Loire). Jérémy et Jonathan Desforges ont repris les terres céréalières de leur père Jean-Louis en 2018 et entrepris, dès 2020, la conversion en agriculture biologique de toute l'exploitation.</p>
-        <p>La ferme produit aujourd'hui des légumes secs, des plantes potagères, des céréales, des légumes et des graines de tournesol bio, dans le plus grand respect des terres. Tous ces produits sont commercialisés sous la marque <strong>Trésors de Beauce</strong>, pour les particuliers, et en direct pour les professionnels sous le nom <strong>Ferme des 3 Rois</strong>.</p>
+      </article>
 
-        <div class="quote-block">
-          <p>« Depuis 6 générations, à la Ferme des 3 Rois, nous perpétuons le travail de la terre avec passion et amour. Nous cultivons nos céréales, graines et légumineuses en 100% biologique afin de respecter l'environnement et notre terre. »</p>
-          <cite>— Jérémy &amp; Jonathan, agriculteurs</cite>
+      <article class="theme-feature is-reverse reveal">
+        <div class="thumb"><img src="assets/images/real/tdb-legumes-secs.jpg" alt="Haricots bariolés bio, Ferme des 3 Rois"></div>
+        <div class="body">
+          <span class="eyebrow">Nos Produits</span>
+          <h3>Céréales, légumineuses, graines &amp; légumes 100% bio</h3>
+          <p>Cultivés et conditionnés sur notre exploitation du Puiset, nos produits bio s'invitent aussi bien dans les cuisines professionnelles que familiales.</p>
+          <a href="nos-produits.html" class="btn btn-ghost">Voir tous nos produits</a>
         </div>
-      </div>
-    </div>
+      </article>
 
-    <!-- Notre Engagement -->
-    <div style="margin-top:96px;">
-      <div class="section-head reveal">
-        <span class="eyebrow">Notre Engagement</span>
-        <h2>Le bio, une conviction de tous les jours</h2>
-        <p>Certifications, agriculture durable, circuit local et impact environnemental : découvrez les piliers de notre engagement paysan.</p>
-      </div>
-
-      <div class="engagement-grid reveal">
-        <article class="engagement-card">
-          <img src="assets/images/placeholders/engagement-bio.svg" alt="Agriculture biologique certifiée">
-          <div class="body">
-            <h4>Bio &amp; certifications</h4>
-            <p>100% de notre exploitation est certifiée Agriculture Biologique (FR-BIO-01). Nous sommes également reconnus « Artisans Militants de la Qualité » et « C du Centre — Produit en région ».</p>
-          </div>
-        </article>
-        <article class="engagement-card">
-          <img src="assets/images/placeholders/engagement-durable.svg" alt="Agriculture durable">
-          <div class="body">
-            <h4>Agriculture durable</h4>
-            <p>Rotation des cultures, fertilisation naturelle, préservation des sols et de la biodiversité : une haute technicité bio pensée pour durer.</p>
-          </div>
-        </article>
-        <article class="engagement-card">
-          <img src="assets/images/placeholders/engagement-circuit.svg" alt="Circuit local">
-          <div class="body">
-            <h4>Circuit local</h4>
-            <p>Notre transformation est réalisée à la ferme, sur une chaîne de tri de pointe, puis vendue en circuit court en Eure-et-Loir, en région Centre et en Île-de-France.</p>
-          </div>
-        </article>
-        <article class="engagement-card">
-          <img src="assets/images/placeholders/engagement-impact.svg" alt="Impact environnemental">
-          <div class="body">
-            <h4>Impact environnemental</h4>
-            <p>Emballages 100% home-compostables ou recyclables, transport limité au local : nous réduisons notre empreinte à chaque étape.</p>
-          </div>
-        </article>
-      </div>
-
-      <div class="certif-row reveal">
-        <span class="certif-badge"><span class="ico">🇫🇷</span> Agriculture France</span>
-        <span class="certif-badge"><span class="ico">🌿</span> Certifié FR-BIO-01</span>
-        <span class="certif-badge"><span class="ico">🏅</span> Artisans Militants de la Qualité</span>
-        <span class="certif-badge"><span class="ico">📍</span> C du Centre — Produit en région</span>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- ==========================================================
-     2. NOS PRODUITS
-     ========================================================== -->
-<section id="produits" class="paper">
-  <div class="container">
-
-    <div class="numbered-head reveal">
-      <span class="num">02</span>
-      <div class="head-text">
-        <span class="eyebrow">Nos Produits</span>
-        <h2>Céréales, légumineuses, graines &amp; légumes 100% bio</h2>
-      </div>
-    </div>
-
-    <p class="tab-panel-intro reveal">Cultivés puis conditionnés sur notre exploitation du Puiset, nos produits bio « 100% Origine Beauce » s'invitent aussi bien dans les cuisines professionnelles que familiales. Disponibles en sachet 400g, en sac de 1 à 5kg, en bocal, ou en vrac 10kg pour les professionnels.</p>
-
-    <div class="tabs-bar reveal" role="tablist">
-      <button class="tab-btn is-active" data-tab="cereales" role="tab" aria-selected="true">Céréales</button>
-      <button class="tab-btn" data-tab="legumineuses" role="tab" aria-selected="false">Légumineuses</button>
-      <button class="tab-btn" data-tab="graines" role="tab" aria-selected="false">Graines</button>
-      <button class="tab-btn" data-tab="legumes" role="tab" aria-selected="false">Légumes</button>
-    </div>
-
-    <!-- CEREALES -->
-    <div class="tab-panel is-active" id="tab-cereales">
-      <div class="product-grid">
-        <article class="product-card">
-          <div class="thumb"><img src="assets/images/placeholders/cereale-petit-epeautre.svg" alt="Petit épeautre bio"><span class="cook-time">⏱ 15 min</span></div>
-          <div class="body"><h4>Petit épeautre</h4><p>Céréale ancienne au goût subtil de noisette, idéale en risotto ou en salade tiède.</p></div>
-        </article>
-        <article class="product-card">
-          <div class="thumb"><img src="assets/images/placeholders/cereale-grand-epeautre.svg" alt="Grand épeautre décortiqué bio"><span class="cook-time">⏱ 60 min</span></div>
-          <div class="body"><h4>Grand épeautre décortiqué</h4><p>Riche et rustique, parfait en accompagnement ou en soupe paysanne.</p></div>
-        </article>
-        <article class="product-card">
-          <div class="thumb"><img src="assets/images/placeholders/cereale-quinoa.svg" alt="Quinoa bio"><span class="cook-time">⏱ 15 min</span></div>
-          <div class="body"><h4>Quinoa</h4><p>Riche en protéines, cuisson rapide, pour salades et bols gourmands.</p></div>
-        </article>
-        <article class="product-card">
-          <div class="thumb"><img src="assets/images/placeholders/cereale-boulgour.svg" alt="Boulgour bio"><span class="cook-time">⏱ 15 min</span></div>
-          <div class="body"><h4>Boulgour</h4><p>Blé concassé à la cuisson express, base idéale du taboulé maison.</p></div>
-        </article>
-        <article class="product-card">
-          <div class="thumb"><img src="assets/images/placeholders/cereale-maispopcorn.svg" alt="Maïs pop-corn bio"><span class="cook-time">⏱ à l'éclatement</span></div>
-          <div class="body"><h4>Maïs pop-corn</h4><p>À éclater en casserole ou au micro-ondes, pour un apéro 100% naturel.</p></div>
-        </article>
-      </div>
-    </div>
-
-    <!-- LEGUMINEUSES -->
-    <div class="tab-panel" id="tab-legumineuses">
-      <p class="subgroup-title">Haricots</p>
-      <div class="product-grid">
-        <article class="product-card">
-          <div class="thumb"><img src="assets/images/placeholders/legumineuse-flageolet.svg" alt="Haricot flageolet bio"><span class="cook-time">⏱ 30 min</span></div>
-          <div class="body"><h4>Haricot Flageolet</h4><p>Fin et fondant, le classique du gigot d'agneau.</p></div>
-        </article>
-        <article class="product-card">
-          <div class="thumb"><img src="assets/images/placeholders/legumineuse-rouge.svg" alt="Haricot rouge bio"><span class="cook-time">⏱ 30 min</span></div>
-          <div class="body"><h4>Haricot Rouge</h4><p>Charnu et généreux, parfait en chili ou en salade composée.</p></div>
-        </article>
-        <article class="product-card">
-          <div class="thumb"><img src="assets/images/placeholders/legumineuse-bariole.svg" alt="Haricot bariolé bio"><span class="cook-time">⏱ 30 min</span></div>
-          <div class="body"><h4>Haricot Bariolé</h4><p>Variété rustique à la texture fondante, façon fagioli italien.</p></div>
-        </article>
-        <article class="product-card">
-          <div class="thumb"><img src="assets/images/placeholders/legumineuse-mogex.svg" alt="Haricot blanc Mogex bio"><span class="cook-time">⏱ 30 min</span></div>
-          <div class="body"><h4>Haricot Blanc Mogex</h4><p>Petit haricot blanc tendre, idéal en cassoulet.</p></div>
-        </article>
-        <article class="product-card">
-          <div class="thumb"><img src="assets/images/placeholders/legumineuse-lingot.svg" alt="Haricot blanc lingot bio"><span class="cook-time">⏱ 30 min</span></div>
-          <div class="body"><h4>Haricot Blanc Lingot</h4><p>Le grand classique des plats mijotés du dimanche.</p></div>
-        </article>
-        <article class="product-card">
-          <div class="thumb"><img src="assets/images/placeholders/legumineuse-noir.svg" alt="Haricot noir bio"><span class="cook-time">⏱ 30 min</span></div>
-          <div class="body"><h4>Haricot Noir</h4><p>Texture crémeuse, parfait pour les cuisines du monde.</p></div>
-        </article>
-      </div>
-
-      <p class="subgroup-title">Lentilles</p>
-      <div class="product-grid">
-        <article class="product-card">
-          <div class="thumb"><img src="assets/images/placeholders/lentille-verte.svg" alt="Lentille verte bio"><span class="cook-time">⏱ 20 min</span></div>
-          <div class="body"><h4>Lentille Verte</h4><p>Style « Le Puy », ferme sous la dent, riche en fibres.</p></div>
-        </article>
-        <article class="product-card">
-          <div class="thumb"><img src="assets/images/placeholders/lentille-blonde.svg" alt="Lentille blonde bio"><span class="cook-time">⏱ 15-30 min</span></div>
-          <div class="body"><h4>Lentille Blonde</h4><p>Douce et fondante, pour des plats tout en délicatesse.</p></div>
-        </article>
-        <article class="product-card">
-          <div class="thumb"><img src="assets/images/placeholders/lentille-corail.svg" alt="Lentille corail bio"><span class="cook-time">⏱ 5-10 min</span></div>
-          <div class="body"><h4>Lentille Corail</h4><p>Cuisson minute, se délite pour dahls et veloutés.</p></div>
-        </article>
-        <article class="product-card">
-          <div class="thumb"><img src="assets/images/placeholders/lentille-beluga.svg" alt="Lentille béluga bio"><span class="cook-time">⏱ 20 min</span></div>
-          <div class="body"><h4>Lentille Béluga</h4><p>Petite et noire, un caviar végétal pour vos salades chics.</p></div>
-        </article>
-      </div>
-
-      <p class="subgroup-title">Pois</p>
-      <div class="product-grid">
-        <article class="product-card">
-          <div class="thumb"><img src="assets/images/placeholders/pois-chiche.svg" alt="Pois chiche bio"><span class="cook-time">⏱ 30 min</span></div>
-          <div class="body"><h4>Pois Chiche</h4><p>Pour houmous, couscous ou simplement « au naturel » en bocal.</p></div>
-        </article>
-        <article class="product-card">
-          <div class="thumb"><img src="assets/images/placeholders/pois-casse.svg" alt="Pois cassé bio"><span class="cook-time">⏱ 30-60 min</span></div>
-          <div class="body"><h4>Pois Cassé</h4><p>Le secret des purées et soupes réconfortantes d'hiver.</p></div>
-        </article>
-      </div>
-    </div>
-
-    <!-- GRAINES -->
-    <div class="tab-panel" id="tab-graines">
-      <div class="product-grid">
-        <article class="product-card">
-          <div class="thumb"><img src="assets/images/placeholders/graine-tournesol.svg" alt="Tournesol décortiqué bio"></div>
-          <div class="body"><h4>Tournesol décortiqué</h4><p>Nature, salé ou torréfié au piment d'Espelette — croquant à l'apéro comme en topping.</p></div>
-        </article>
-        <article class="product-card">
-          <div class="thumb"><img src="assets/images/placeholders/graine-lin-dore.svg" alt="Graines de lin doré bio"></div>
-          <div class="body"><h4>Lin Doré</h4><p>À saupoudrer sur salades, yaourts ou porridges pour un boost d'oméga-3.</p></div>
-        </article>
-        <article class="product-card">
-          <div class="thumb"><img src="assets/images/placeholders/graine-lin-brun.svg" alt="Graines de lin brun bio"></div>
-          <div class="body"><h4>Lin Brun</h4><p>Saveur plus prononcée, parfaite en pain maison.</p></div>
-        </article>
-        <article class="product-card">
-          <div class="thumb"><img src="assets/images/placeholders/graine-chia.svg" alt="Graines de chia bio"></div>
-          <div class="body"><h4>Graines de Chia <span style="color:var(--orange-600);">· Nouveau</span></h4><p>La star des puddings et des petits-déjeuners healthy.</p></div>
-        </article>
-      </div>
-    </div>
-
-    <!-- LEGUMES -->
-    <div class="tab-panel" id="tab-legumes">
-      <p class="tab-panel-intro">Aux côtés de nos légumes secs, nous cultivons des légumes de plein champ en agriculture biologique, disponibles selon la saison.</p>
-      <div class="product-grid">
-        <article class="product-card">
-          <div class="thumb"><img src="assets/images/placeholders/legume-pomme-terre.svg" alt="Pommes de terre bio"></div>
-          <div class="body"><h4>Pommes de terre</h4><p>Cultivées sur nos terres beauceronnes, disponibles à l'automne et en hiver.</p></div>
-        </article>
-        <article class="product-card">
-          <div class="thumb"><img src="assets/images/placeholders/legume-oignon.svg" alt="Oignons bio"></div>
-          <div class="body"><h4>Oignons</h4><p>Doux et parfumés, récoltés en fin d'été.</p></div>
-        </article>
-        <article class="product-card">
-          <div class="thumb"><img src="assets/images/placeholders/legume-courge.svg" alt="Courges bio"></div>
-          <div class="body"><h4>Courges</h4><p>Variétés de saison, idéales pour les veloutés d'automne.</p></div>
-        </article>
-        <article class="product-card">
-          <div class="thumb"><img src="assets/images/placeholders/legume-betterave.svg" alt="Betteraves bio"></div>
-          <div class="body"><h4>Betteraves</h4><p>Crues, cuites ou en jus, un légume racine plein de caractère.</p></div>
-        </article>
-      </div>
-    </div>
-
-    <div class="product-more reveal">
-      <a href="#contact" class="btn btn-ghost">Voir toute la gamme &amp; tarifs professionnels</a>
+      <article class="theme-feature reveal">
+        <div class="thumb"><img src="assets/images/real/tdb-decortiques.jpg" alt="Tournesol décortiqué bio, Ferme des 3 Rois"></div>
+        <div class="body">
+          <span class="eyebrow">Recettes</span>
+          <h3>Téléchargez gratuitement nos fiches recette</h3>
+          <p>Casserole, cocotte-minute ou four : notre fiche temps de cuisson et nos recettes salées et sucrées pour cuisiner nos produits comme des chefs.</p>
+          <a href="recettes.html" class="btn btn-ghost">Découvrir les recettes</a>
+        </div>
+      </article>
     </div>
 
   </div>
@@ -343,7 +152,7 @@
 <!-- ==========================================================
      GALERIE PHOTO
      ========================================================== -->
-<section id="galerie">
+<section id="galerie" class="paper">
   <div class="container">
     <div class="section-head center reveal" style="margin-left:auto;margin-right:auto;">
       <span class="script-tag">Notre exploitation en images</span>
@@ -353,9 +162,9 @@
     <div class="gallery-grid reveal" id="galleryGrid">
       <a href="assets/images/real/histoire-portrait.jpg" data-lightbox><img src="assets/images/real/histoire-portrait.jpg" alt="Jérémy et Jonathan, une histoire de famille"></a>
       <a href="assets/images/placeholders/galerie-2.svg" data-lightbox><img src="assets/images/placeholders/galerie-2.svg" alt="Le travail de la terre"></a>
-      <a href="assets/images/placeholders/galerie-3.svg" data-lightbox><img src="assets/images/placeholders/galerie-3.svg" alt="Nos légumineuses"></a>
+      <a href="assets/images/real/tdb-legumes-secs.jpg" data-lightbox><img src="assets/images/real/tdb-legumes-secs.jpg" alt="Nos légumineuses"></a>
       <a href="assets/images/placeholders/galerie-4.svg" data-lightbox><img src="assets/images/placeholders/galerie-4.svg" alt="Nos céréales"></a>
-      <a href="assets/images/placeholders/galerie-5.svg" data-lightbox><img src="assets/images/placeholders/galerie-5.svg" alt="Nos graines"></a>
+      <a href="assets/images/real/tdb-decortiques.jpg" data-lightbox><img src="assets/images/real/tdb-decortiques.jpg" alt="Nos graines"></a>
       <a href="assets/images/real/histoire-batiment.jpg" data-lightbox><img src="assets/images/real/histoire-batiment.jpg" alt="Notre corps de ferme, au Puiset en Beauce"></a>
       <a href="assets/images/placeholders/galerie-7.svg" data-lightbox><img src="assets/images/placeholders/galerie-7.svg" alt="Nos produits en cuisine"></a>
       <a href="assets/images/placeholders/galerie-8.svg" data-lightbox><img src="assets/images/placeholders/galerie-8.svg" alt="Nos légumes"></a>
@@ -372,112 +181,12 @@
 </section>
 
 <!-- ==========================================================
-     3. RECETTES
-     ========================================================== -->
-<section id="recettes" class="paper">
-  <div class="container">
-
-    <div class="numbered-head reveal">
-      <span class="num">03</span>
-      <div class="head-text">
-        <span class="eyebrow">Recettes</span>
-        <h2>Téléchargez gratuitement nos fiches recette</h2>
-      </div>
-    </div>
-
-    <!-- Fiche temps de cuisson -->
-    <div class="recipe-feature reveal">
-      <img src="assets/images/real/histoire-batiment.jpg" alt="Croquis de la ferme des 3 Rois, au Puiset en Beauce">
-      <div class="body">
-        <span class="eyebrow">Outil pratique</span>
-        <h3>La fiche « Temps de cuisson »</h3>
-        <p>Casserole, cocotte-minute, four ou micro-ondes : retrouvez en un coup d'œil le temps de cuisson idéal pour chacun de nos produits (pois, haricots, lentilles, céréales...).</p>
-        <a href="assets/docs/fiche-temps-de-cuisson.pdf" class="btn btn-primary" download>Télécharger la fiche cuisson (PDF)</a>
-      </div>
-    </div>
-
-    <div class="tabs-bar reveal" role="tablist">
-      <button class="tab-btn is-active" data-tab="sale" role="tab" aria-selected="true">Recettes salées</button>
-      <button class="tab-btn" data-tab="sucre" role="tab" aria-selected="false">Recettes sucrées</button>
-    </div>
-
-    <!-- SALE -->
-    <div class="tab-panel is-active" id="tab-sale">
-      <div class="recipe-grid">
-        <article class="recipe-card">
-          <div class="thumb"><img src="assets/images/placeholders/recette-risotto.svg" alt="Risotto de petit épeautre au chèvre"></div>
-          <div class="body">
-            <div class="meta"><span>Recette N°2</span><span>·</span><span>4 personnes</span></div>
-            <h4>Risotto de petit épeautre au chèvre</h4>
-            <p>Petit épeautre, échalote, vin blanc et crottin de chèvre fondu : un risotto paysan et réconfortant.</p>
-            <a href="assets/docs/recette-risotto-petit-epeautre.pdf" class="btn btn-ghost btn-sm" download>Télécharger (PDF)</a>
-          </div>
-        </article>
-        <article class="recipe-card">
-          <div class="thumb"><img src="assets/images/placeholders/recette-salade-lentilles.svg" alt="Salade de lentilles corail"></div>
-          <div class="body">
-            <div class="meta"><span>Recette N°3</span><span>·</span><span>4 personnes</span></div>
-            <h4>Salade de lentilles corail</h4>
-            <p>Fraîche et colorée, relevée d'agrumes et d'herbes du jardin.</p>
-            <button class="btn btn-ghost btn-sm" disabled>Bientôt disponible</button>
-          </div>
-        </article>
-        <article class="recipe-card">
-          <div class="thumb"><img src="assets/images/placeholders/recette-chili-haricots.svg" alt="Chili de haricots rouges"></div>
-          <div class="body">
-            <div class="meta"><span>Recette N°4</span><span>·</span><span>6 personnes</span></div>
-            <h4>Chili de haricots rouges</h4>
-            <p>Un plat généreux et épicé, pensé pour les grandes tablées.</p>
-            <button class="btn btn-ghost btn-sm" disabled>Bientôt disponible</button>
-          </div>
-        </article>
-      </div>
-    </div>
-
-    <!-- SUCRE -->
-    <div class="tab-panel" id="tab-sucre">
-      <div class="recipe-grid">
-        <article class="recipe-card">
-          <div class="thumb"><img src="assets/images/placeholders/recette-pudding-chia.svg" alt="Pudding de graines de chia"></div>
-          <div class="body">
-            <div class="meta"><span>Recette N°5</span><span>·</span><span>4 personnes</span></div>
-            <h4>Pudding de graines de chia</h4>
-            <p>Graines de chia, lait de coco, miel, mangue et yaourt grec : un dessert healthy et gourmand.</p>
-            <a href="assets/docs/recette-pudding-chia.pdf" class="btn btn-ghost btn-sm" download>Télécharger (PDF)</a>
-          </div>
-        </article>
-        <article class="recipe-card">
-          <div class="thumb"><img src="assets/images/placeholders/recette-porridge-epeautre.svg" alt="Porridge de petit épeautre"></div>
-          <div class="body">
-            <div class="meta"><span>Recette N°6</span><span>·</span><span>2 personnes</span></div>
-            <h4>Porridge de petit épeautre</h4>
-            <p>Un petit-déjeuner réconfortant à base de céréales de la ferme.</p>
-            <button class="btn btn-ghost btn-sm" disabled>Bientôt disponible</button>
-          </div>
-        </article>
-        <article class="recipe-card">
-          <div class="thumb"><img src="assets/images/placeholders/recette-cookies-lin.svg" alt="Cookies aux graines de lin"></div>
-          <div class="body">
-            <div class="meta"><span>Recette N°7</span><span>·</span><span>12 cookies</span></div>
-            <h4>Cookies aux graines de lin</h4>
-            <p>Croustillants à l'extérieur, moelleux à l'intérieur, avec nos graines de lin doré.</p>
-            <button class="btn btn-ghost btn-sm" disabled>Bientôt disponible</button>
-          </div>
-        </article>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- ==========================================================
      4. OU NOUS TROUVER / CONTACT
      ========================================================== -->
 <section id="contact">
   <div class="container">
 
     <div class="numbered-head reveal">
-      <span class="num">04</span>
       <div class="head-text">
         <span class="eyebrow">Où nous trouver</span>
         <h2>Nos points de vente &amp; contact</h2>
@@ -531,8 +240,8 @@
 
         <h3 style="margin-bottom:14px;">Suivez-nous</h3>
         <div class="social-row">
-          <a href="#" class="social-btn">📘 Facebook</a>
-          <a href="#" class="social-btn">📷 Instagram</a>
+          <a href="https://www.facebook.com/Tr%C3%A9sors-De-Beauce-111578571300424" class="social-btn" target="_blank" rel="noopener">📘 Facebook</a>
+          <a href="https://www.instagram.com/tresorsdebeauce/" class="social-btn" target="_blank" rel="noopener">📷 Instagram</a>
           <a href="#" class="social-btn">▶️ YouTube</a>
         </div>
       </div>
@@ -597,20 +306,20 @@
   <div class="container">
     <div class="footer-top">
       <div class="footer-brand">
-        <img src="assets/images/logo-horizontal.jpg" alt="Ferme des 3 Rois — Trésors de Beauce">
+        <img src="assets/images/logo-horizontal.png" alt="Ferme des 3 Rois — Trésors de Beauce">
         <p>Ferme familiale bio au cœur de la Beauce depuis 6 générations. Nos productions sont commercialisées sous les marques Ferme des 3 Rois et Trésors de Beauce.</p>
         <div class="footer-social">
-          <a href="#" aria-label="Facebook">📘</a>
-          <a href="#" aria-label="Instagram">📷</a>
+          <a href="https://www.facebook.com/Tr%C3%A9sors-De-Beauce-111578571300424" aria-label="Facebook" target="_blank" rel="noopener">📘</a>
+          <a href="https://www.instagram.com/tresorsdebeauce/" aria-label="Instagram" target="_blank" rel="noopener">📷</a>
           <a href="#" aria-label="YouTube">▶️</a>
         </div>
       </div>
       <div class="footer-col">
         <h5>Le site</h5>
         <ul>
-          <li><a href="#ferme">La Ferme</a></li>
-          <li><a href="#produits">Nos Produits</a></li>
-          <li><a href="#recettes">Recettes</a></li>
+          <li><a href="la-ferme.html">La Ferme</a></li>
+          <li><a href="nos-produits.html">Nos Produits</a></li>
+          <li><a href="recettes.html">Recettes</a></li>
           <li><a href="#contact">Où nous trouver</a></li>
         </ul>
       </div>
@@ -619,7 +328,7 @@
         <ul>
           <li><a href="#accueil">Ferme des 3 Rois</a></li>
           <li><a href="#accueil">Trésors de Beauce</a></li>
-          <li><a href="#produits">Espace professionnel</a></li>
+          <li><a href="nos-produits.html">Espace professionnel</a></li>
         </ul>
       </div>
       <div class="footer-col">

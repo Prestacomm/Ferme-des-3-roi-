@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Recettes — Ferme des 3 Rois</title>
+<meta name="description" content="Téléchargez gratuitement notre fiche temps de cuisson et nos recettes salées et sucrées à base de céréales, légumineuses et graines bio de la Ferme des 3 Rois.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Caveat:wght@600&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<!-- ==========================================================
+     HEADER
+     ========================================================== -->
+<header class="site-header" id="siteHeader">
+  <div class="container">
+    <a href="index.html" class="brand">
+      <img src="assets/images/logo-horizontal.png" alt="Ferme des 3 Rois — Trésors de Beauce">
+    </a>
+
+    <nav class="main-nav" id="mainNav">
+      <a href="la-ferme.html">La Ferme</a>
+      <a href="nos-produits.html">Nos Produits</a>
+      <a href="recettes.html">Recettes</a>
+      <a href="index.html#contact">Où nous trouver</a>
+    </nav>
+
+    <div class="header-cta">
+      <div class="ab-chip">
+        <span class="ab-badge">AB</span>
+        <span>Certifié<br>Agriculture Biologique</span>
+      </div>
+      <a href="index.html#contact" class="btn btn-primary btn-sm">Nous contacter</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Ouvrir le menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ==========================================================
+     EN-TÊTE DE PAGE
+     ========================================================== -->
+<section class="page-header" style="background-image:url('assets/images/real/tdb-engagement-3.jpg')">
+  <div class="container">
+    <span class="eyebrow">Recettes</span>
+    <h1>Téléchargez gratuitement nos fiches recette</h1>
+    <p>Fiche temps de cuisson, recettes salées et sucrées : cuisinez nos céréales, légumineuses et graines bio comme des chefs.</p>
+  </div>
+</section>
+
+<!-- ==========================================================
+     RECETTES
+     ========================================================== -->
+<section>
+  <div class="container">
+
+    <!-- Fiche temps de cuisson -->
+    <div class="recipe-feature reveal">
+      <img src="assets/images/real/histoire-batiment.jpg" alt="Corps de ferme de la Ferme des 3 Rois, au Puiset en Beauce">
+      <div class="body">
+        <span class="eyebrow">Outil pratique</span>
+        <h3>La fiche « Temps de cuisson »</h3>
+        <p>Casserole, cocotte-minute, four ou micro-ondes : retrouvez en un coup d'œil le temps de cuisson idéal pour chacun de nos produits (pois, haricots, lentilles, céréales...).</p>
+        <a href="assets/docs/fiche-temps-de-cuisson.pdf" class="btn btn-primary" download>Télécharger la fiche cuisson (PDF)</a>
+      </div>
+    </div>
+
+    <div class="tabs-bar reveal" role="tablist">
+      <button class="tab-btn is-active" data-tab="sale" role="tab" aria-selected="true">Recettes salées</button>
+      <button class="tab-btn" data-tab="sucre" role="tab" aria-selected="false">Recettes sucrées</button>
+    </div>
+
+    <!-- SALE -->
+    <div class="tab-panel is-active" id="tab-sale">
+      <div class="recipe-grid">
+        <article class="recipe-card">
+          <div class="thumb"><img src="assets/images/placeholders/recette-risotto.svg" alt="Risotto de petit épeautre au chèvre"></div>
+          <div class="body">
+            <div class="meta"><span>Recette N°2</span><span>·</span><span>4 personnes</span></div>
+            <h4>Risotto de petit épeautre au chèvre</h4>
+            <p>Petit épeautre, échalote, vin blanc et crottin de chèvre fondu : un risotto paysan et réconfortant.</p>
+            <a href="assets/docs/recette-risotto-petit-epeautre.pdf" class="btn btn-ghost btn-sm" download>Télécharger (PDF)</a>
+          </div>
+        </article>
+        <article class="recipe-card">
+          <div class="thumb"><img src="assets/images/placeholders/recette-salade-lentilles.svg" alt="Salade de lentilles corail"></div>
+          <div class="body">
+            <div class="meta"><span>Recette N°3</span><span>·</span><span>4 personnes</span></div>
+            <h4>Salade de lentilles corail</h4>
+            <p>Fraîche et colorée, relevée d'agrumes et d'herbes du jardin.</p>
+            <button class="btn btn-ghost btn-sm" disabled>Bientôt disponible</button>
+          </div>
+        </article>
+        <article class="recipe-card">
+          <div class="thumb"><img src="assets/images/placeholders/recette-chili-haricots.svg" alt="Chili de haricots rouges"></div>
+          <div class="body">
+            <div class="meta"><span>Recette N°4</span><span>·</span><span>6 personnes</span></div>
+            <h4>Chili de haricots rouges</h4>
+            <p>Un plat généreux et épicé, pensé pour les grandes tablées.</p>
+            <button class="btn btn-ghost btn-sm" disabled>Bientôt disponible</button>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <!-- SUCRE -->
+    <div class="tab-panel" id="tab-sucre">
+      <div class="recipe-grid">
+        <article class="recipe-card">
+          <div class="thumb"><img src="assets/images/placeholders/recette-pudding-chia.svg" alt="Pudding de graines de chia"></div>
+          <div class="body">
+            <div class="meta"><span>Recette N°5</span><span>·</span><span>4 personnes</span></div>
+            <h4>Pudding de graines de chia</h4>
+            <p>Graines de chia, lait de coco, miel, mangue et yaourt grec : un dessert healthy et gourmand.</p>
+            <a href="assets/docs/recette-pudding-chia.pdf" class="btn btn-ghost btn-sm" download>Télécharger (PDF)</a>
+          </div>
+        </article>
+        <article class="recipe-card">
+          <div class="thumb"><img src="assets/images/placeholders/recette-porridge-epeautre.svg" alt="Porridge de petit épeautre"></div>
+          <div class="body">
+            <div class="meta"><span>Recette N°6</span><span>·</span><span>2 personnes</span></div>
+            <h4>Porridge de petit épeautre</h4>
+            <p>Un petit-déjeuner réconfortant à base de céréales de la ferme.</p>
+            <button class="btn btn-ghost btn-sm" disabled>Bientôt disponible</button>
+          </div>
+        </article>
+        <article class="recipe-card">
+          <div class="thumb"><img src="assets/images/placeholders/recette-cookies-lin.svg" alt="Cookies aux graines de lin"></div>
+          <div class="body">
+            <div class="meta"><span>Recette N°7</span><span>·</span><span>12 cookies</span></div>
+            <h4>Cookies aux graines de lin</h4>
+            <p>Croustillants à l'extérieur, moelleux à l'intérieur, avec nos graines de lin doré.</p>
+            <button class="btn btn-ghost btn-sm" disabled>Bientôt disponible</button>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <div class="page-cta reveal">
+      <div>
+        <h3>Envie de cuisiner nos produits ?</h3>
+        <p>Découvrez toute notre gamme de céréales, légumineuses, graines et légumes 100% bio.</p>
+      </div>
+      <a href="nos-produits.html" class="btn btn-primary">Voir nos produits</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ==========================================================
+     FOOTER
+     ========================================================== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="assets/images/logo-horizontal.png" alt="Ferme des 3 Rois — Trésors de Beauce">
+        <p>Ferme familiale bio au cœur de la Beauce depuis 6 générations. Nos productions sont commercialisées sous les marques Ferme des 3 Rois et Trésors de Beauce.</p>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/Tr%C3%A9sors-De-Beauce-111578571300424" aria-label="Facebook" target="_blank" rel="noopener">📘</a>
+          <a href="https://www.instagram.com/tresorsdebeauce/" aria-label="Instagram" target="_blank" rel="noopener">📷</a>
+          <a href="#" aria-label="YouTube">▶️</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Le site</h5>
+        <ul>
+          <li><a href="la-ferme.html">La Ferme</a></li>
+          <li><a href="nos-produits.html">Nos Produits</a></li>
+          <li><a href="recettes.html">Recettes</a></li>
+          <li><a href="index.html#contact">Où nous trouver</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Nos marques</h5>
+        <ul>
+          <li><a href="index.html">Ferme des 3 Rois</a></li>
+          <li><a href="index.html">Trésors de Beauce</a></li>
+          <li><a href="nos-produits.html">Espace professionnel</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <ul>
+          <li>271 Rue du Dauphin<br>28310 Janville-en-Beauce</li>
+          <li><a href="tel:+33778511846">07 78 51 18 46</a></li>
+          <li><a href="mailto:contact@fermedes3rois.fr">contact@fermedes3rois.fr</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Ferme des Trois Rois — SIRET 844 445 882 00021</span>
+      <span><a href="#">Mentions légales</a> · <a href="#">CGV</a> · <a href="#">Politique de confidentialité</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
