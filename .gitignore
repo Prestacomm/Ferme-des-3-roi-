@@ -6,3 +6,6 @@
 
 # Documents sources bruts (packaging, tarifs...) : pas nécessaires au site en ligne
 INFORMATION FERME DES 3 ROIS*/
+# Fichiers de prévisualisation locale
+scripts/serve.py
+.claude/launch.json
