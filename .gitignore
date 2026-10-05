@@ -9,3 +9,7 @@ INFORMATION FERME DES 3 ROIS*/
 # Fichiers de prévisualisation locale
 scripts/serve.py
 .claude/launch.json
+# Secrets
+.env
+.env.*
+!.env.example
