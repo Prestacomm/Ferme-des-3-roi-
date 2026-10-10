@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', function () {
       var r = start.r * (1 - expand);
       heroFrame.style.clipPath = 'inset(' + v + 'vh ' + h + 'vw round ' + r + 'px)';
 
-      if (heroGradient) heroGradient.style.opacity = String(0.35 + 0.55 * expand);
+      if (heroGradient) heroGradient.style.opacity = String(0.75 + 0.2 * expand);
       if (heroLabel){
         heroLabel.style.opacity = String(labelOpacity);
         heroLabel.style.transform = 'translateY(' + (-24 * (1 - labelOpacity)) + 'px)';
@@ -151,9 +151,11 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
   function closeLightbox(){ lightbox.classList.remove('is-open'); lightboxImg.src=''; }
-  lightboxClose.addEventListener('click', closeLightbox);
-  lightbox.addEventListener('click', function(e){ if (e.target === lightbox) closeLightbox(); });
-  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') closeLightbox(); });
+  if (lightbox && lightboxClose) {
+    lightboxClose.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', function(e){ if (e.target === lightbox) closeLightbox(); });
+    document.addEventListener('keydown', function(e){ if (e.key === 'Escape') closeLightbox(); });
+  }
 
   /* ---------- Formulaire de contact (démo front-end) ---------- */
   var form = document.getElementById('contactForm');
@@ -167,6 +169,19 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
+  /* ---------- Galerie élastique (La Ferme) ---------- */
+  var elasticItems = document.querySelectorAll('.elastic-item');
+  function activateElastic(item){
+    elasticItems.forEach(function(el){ el.classList.toggle('is-active', el === item); });
+  }
+  elasticItems.forEach(function(item){
+    item.addEventListener('mouseenter', function(){
+      if (window.matchMedia('(hover: hover)').matches) activateElastic(item);
+    });
+    item.addEventListener('click', function(){ activateElastic(item); });
+    item.addEventListener('focus', function(){ activateElastic(item); });
+  });
+
   /* ---------- Animations au scroll ---------- */
   var revealEls = document.querySelectorAll('.reveal');
   if ('IntersectionObserver' in window) {
@@ -177,7 +192,7 @@ document.addEventListener('DOMContentLoaded', function () {
           observer.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.15 });
+    }, { threshold: 0, rootMargin: '0px 0px -40px 0px' });
     revealEls.forEach(function(el){ observer.observe(el); });
   } else {
     revealEls.forEach(function(el){ el.classList.add('is-visible'); });

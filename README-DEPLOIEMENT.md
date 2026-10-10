@@ -58,16 +58,7 @@ La photo d'accueil s'agrandit progressivement au fil du défilement jusqu'à occ
 l'écran, puis le titre et les boutons apparaissent par-dessus. Effet 100% CSS/JS maison
 (`clip-path` animé au scroll), sans dépendance ni librairie.
 
-**Crédits photo** (libres de droit, Licence Unsplash — utilisation commerciale gratuite,
-attribution non obligatoire mais indiquée par courtoisie) :
-- `assets/images/hero/champ-ble-normandie.jpg` — champ de blé au coucher du soleil,
-  Normandie, par **Benoît Deschasaux**.
-- `assets/images/hero/moissonneuses-champ-ble.jpg` — moissonneuses-batteuses, par
-  **Darla Hueske**.
-
-Ce sont des photos génériques de qualité pour donner tout de suite un rendu premium ;
-idéalement, remplacez-les par de vraies photos de vos champs et de votre matériel dès que
-vous en aurez (mêmes noms de fichiers pour ne rien casser).
+**Photos du hero** : ce sont de vraies photos de la ferme — `assets/images/real/ferme-de-loin.jpg` (cadre qui s'agrandit) et `assets/images/real/moisson-2.jpg` (moissonneuse, arrière-plan flouté). Les anciennes photos Unsplash restent dans `assets/images/hero/` mais ne sont plus utilisées.
 
 ## À faire avant mise en ligne
 
