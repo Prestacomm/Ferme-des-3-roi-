@@ -7,13 +7,46 @@
 <meta name="description" content="Ferme familiale bio au cœur de la Beauce depuis 6 générations. Céréales, légumineuses, graines et légumes certifiés AB, commercialisés sous les marques Ferme des 3 Rois et Trésors de Beauce.">
 
 <!-- Google Fonts : Fraunces (titres), Caveat (accent manuscrit), Work Sans (texte courant) -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-
+<link rel="canonical" href="https://www.fermedes3rois.com/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="Ferme des 3 Rois — Trésors de Beauce">
+<meta property="og:title" content="Ferme des 3 Rois — Producteur bio en Beauce | Ferme des 3 Rois & Trésors de Beauce">
+<meta property="og:description" content="Ferme familiale bio au cœur de la Beauce depuis 6 générations. Céréales, légumineuses, graines et légumes certifiés AB, commercialisés sous les marques Ferme des 3 Rois et Trésors de Beauce.">
+<meta property="og:url" content="https://www.fermedes3rois.com/">
+<meta property="og:image" content="https://www.fermedes3rois.com/assets/images/real/ferme-de-loin.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" href="assets/fonts/work-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/fonts.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Ferme des 3 Rois",
+  "alternateName": "Trésors de Beauce",
+  "url": "https://www.fermedes3rois.com/",
+  "logo": "https://www.fermedes3rois.com/assets/images/logo-horizontal.png",
+  "description": "Exploitation agricole familiale biologique en Beauce : céréales, légumineuses, graines et légumes bio.",
+  "email": "contact@fermedes3rois.fr",
+  "telephone": "+33778511846",
+  "taxID": "84444588200021",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "271 Rue du Dauphin, Le Puiset",
+    "postalCode": "28310",
+    "addressLocality": "Janville-en-Beauce",
+    "addressCountry": "FR"
+  },
+  "sameAs": [
+    "https://www.facebook.com/Tr%C3%A9sors-De-Beauce-111578571300424",
+    "https://www.instagram.com/tresorsdebeauce/"
+  ]
+}
+</script>
 <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+<a class="skip-link" href="#main">Aller au contenu principal</a>
 
 <!-- ==========================================================
      HEADER
@@ -42,6 +75,8 @@
     </div>
   </div>
 </header>
+
+<main id="main">
 
 <!-- ==========================================================
      HERO — la photo s'agrandit au fil du défilement (scroll to expand)
@@ -256,10 +291,16 @@
           <p class="store-note">Liste de points de vente à titre d'exemple — à personnaliser avec vos revendeurs réels.</p>
         </div>
 
-        <div class="map-embed reveal">
-          <iframe
-            src="https://maps.google.com/maps?q=271%20Rue%20du%20Dauphin%2C%2028310%20Janville-en-Beauce&t=&z=13&ie=UTF8&iwloc=&output=embed"
-            loading="lazy" title="Localisation de la Ferme des 3 Rois"></iframe>
+        <div class="map-embed reveal" data-consent-box="maps">
+          <iframe data-consent-src="https://maps.google.com/maps?q=271%20Rue%20du%20Dauphin%2C%2028310%20Janville-en-Beauce&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed"
+            data-consent-cat="maps" loading="lazy" title="Localisation de la Ferme des 3 Rois" hidden></iframe>
+          <div class="consent-placeholder">
+            <p><strong>Carte Google Maps</strong><br>Pour afficher la carte, votre navigateur doit se connecter à Google, qui peut déposer des cookies. Rien n'est chargé tant que vous n'avez pas accepté.</p>
+            <div class="consent-placeholder__actions">
+              <button type="button" class="btn btn-primary btn-sm" data-consent-grant="maps">Afficher la carte</button>
+              <a class="btn btn-ghost btn-sm" href="https://www.google.com/maps/search/?api=1&amp;query=271+Rue+du+Dauphin+28310+Janville-en-Beauce" target="_blank" rel="noopener">Ouvrir sur Google Maps</a>
+            </div>
+          </div>
         </div>
 
         <h3 style="margin-bottom:14px;">Suivez-nous</h3>
@@ -286,31 +327,32 @@
         <form id="contactForm">
           <div class="form-row">
             <div class="field">
-              <label for="cf-nom">Nom &amp; prénom</label>
-              <input type="text" id="cf-nom" name="nom" required>
+              <label for="cf-nom">Nom et prénom <span aria-hidden="true">*</span></label>
+              <input type="text" id="cf-nom" name="nom" autocomplete="name" required aria-required="true">
             </div>
             <div class="field">
-              <label for="cf-tel">Téléphone</label>
-              <input type="tel" id="cf-tel" name="telephone">
+              <label for="cf-tel">Téléphone <span class="opt">(facultatif)</span></label>
+              <input type="tel" id="cf-tel" name="telephone" autocomplete="tel">
             </div>
           </div>
           <div class="field">
-            <label for="cf-email">Email</label>
-            <input type="email" id="cf-email" name="email" required>
+            <label for="cf-email">Email <span aria-hidden="true">*</span></label>
+            <input type="email" id="cf-email" name="email" autocomplete="email" required aria-required="true">
           </div>
 
-          <div class="radio-group">
+          <fieldset class="radio-group"><legend>Vous êtes</legend>
             <label><input type="radio" name="profil" value="particulier" checked> Particulier</label>
             <label><input type="radio" name="profil" value="professionnel"> Professionnel / Boutique</label>
-          </div>
+          </fieldset>
 
           <div class="field">
-            <label for="cf-message">Votre message</label>
-            <textarea id="cf-message" name="message" rows="4" required></textarea>
+            <label for="cf-message">Votre message <span aria-hidden="true">*</span></label>
+            <textarea id="cf-message" name="message" rows="4" required aria-required="true"></textarea>
           </div>
 
           <button type="submit" class="btn btn-primary" style="width:100%;">Envoyer le message</button>
-          <p class="form-note">Formulaire de démonstration : à connecter à votre messagerie ou, sous WordPress, à un plugin comme Contact Form 7 / WPForms.</p>
+          <!-- À connecter : envoi réel (WordPress : Contact Form 7 / WPForms) — voir README-DEPLOIEMENT.md -->
+          <p class="form-note">* Champs obligatoires. Les informations saisies sont utilisées uniquement pour répondre à votre demande (responsable du traitement : Ferme des 3 Rois) et conservées 3 ans au maximum. Vous disposez d'un droit d'accès, de rectification, d'effacement et d'opposition : <a href="politique-de-confidentialite.html">en savoir plus sur vos droits et vos données</a>.</p>
           <div class="form-success" id="formSuccess">✓ Merci, votre message a bien été envoyé. Notre équipe vous répond sous 48h.</div>
         </form>
       </div>
@@ -318,6 +360,8 @@
     </div>
   </div>
 </section>
+
+</main>
 
 <!-- ==========================================================
      FOOTER
@@ -334,7 +378,7 @@
         </div>
       </div>
       <div class="footer-col">
-        <h5>Le site</h5>
+        <h2>Le site</h2>
         <ul>
           <li><a href="la-ferme.html">La Ferme</a></li>
           <li><a href="nos-produits.html">Nos Produits</a></li>
@@ -343,15 +387,15 @@
         </ul>
       </div>
       <div class="footer-col">
-        <h5>Nos marques</h5>
+        <h2>Nos marques</h2>
         <ul>
           <li><a href="#accueil">Ferme des 3 Rois</a></li>
           <li><a href="#accueil">Trésors de Beauce</a></li>
-          <li><a href="nos-produits.html">Espace professionnel</a></li>
+          <li><a href="#contact">Tarifs professionnels</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h5>Contact</h5>
+        <h2>Contact</h2>
         <ul>
           <li>271 Rue du Dauphin<br>28310 Janville-en-Beauce</li>
           <li><a href="tel:+33778511846">07 78 51 18 46</a></li>
@@ -360,18 +404,19 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 Ferme des Trois Rois — SIRET 844 445 882 00021</span>
-      <span><a href="#">Mentions légales</a> · <a href="#">CGV</a> · <a href="#">Politique de confidentialité</a></span>
+      <span>© 2026 Ferme des 3 Rois — SIRET 844 445 882 00021</span>
+      <span class="footer-legal"><a href="mentions-legales.html">Mentions légales</a> · <a href="cgv.html">CGV</a> · <a href="politique-de-confidentialite.html">Politique de confidentialité</a> · <a href="politique-cookies.html">Cookies</a> · <button type="button" class="link-btn" data-open-consent>Gérer mes cookies</button></span>
     </div>
   </div>
 </footer>
 
 <!-- Lightbox galerie -->
 <div class="lightbox" id="lightbox">
-  <button class="lightbox-close" id="lightboxClose">✕</button>
+  <button class="lightbox-close" id="lightboxClose" aria-label="Fermer l'image">✕</button>
   <img src="" alt="" id="lightboxImg">
 </div>
 
 <script src="assets/js/main.js"></script>
+<script src="assets/js/consent.js"></script>
 </body>
 </html>

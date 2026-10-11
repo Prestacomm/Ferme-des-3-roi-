@@ -1,0 +1,5 @@
+# Les robots des moteurs de recherche et des assistants IA sont les bienvenus.
+User-agent: *
+Allow: /
+
+Sitemap: https://www.fermedes3rois.com/sitemap.xml

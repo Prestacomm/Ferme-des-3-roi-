@@ -113,3 +113,22 @@ nous trouver » comme section de la page d'accueil — exactement l'arborescence
 - **Formulaire de contact** → Contact Form 7 ou WPForms, à styliser avec les mêmes couleurs.
 - La Ferme, Nos Produits et Recettes sont chacune une page WordPress à part entière ;
   « Où nous trouver » (04) reste une section de la page d'accueil.
+
+
+## Conformité légale (à finir avant la mise en ligne)
+
+Pages créées : `mentions-legales.html`, `cgv.html`, `politique-de-confidentialite.html`, `politique-cookies.html`,
+reliées dans le pied de page de chaque page. Les informations manquantes sont repérées par des pastilles jaunes
+`[À COMPLÉTER …]` : cherchez `class="todo"` dans ces fichiers.
+
+À compléter / décider :
+- raison sociale exacte, forme juridique, capital, RCS, TVA, directeur de la publication ;
+- hébergeur définitif (nom, adresse, téléphone) ;
+- médiateur de la consommation à choisir et à adhérer (CGV) ;
+- détails des CGV : moyens et délais de paiement, livraison, taux de pénalités, tribunal compétent ;
+- connecter le formulaire de contact à un envoi réel (le message de succès actuel est une démonstration) ;
+- remplacer les photos de maquette (`open-*.jpg`) par vos photos ;
+- vérifier la liste des points de vente (exemples non réels) ;
+- relecture par un juriste avant mise en ligne.
+
+Cookies : tout service tiers non essentiel doit passer par `assets/js/consent.js` (mode d'emploi en tête du fichier).
