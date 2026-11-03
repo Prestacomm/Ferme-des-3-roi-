@@ -3,13 +3,17 @@
 ## Structure du projet
 
 ```
-index.html                        → Accueil : hero, aperçu des 3 thèmes, galerie, contact
+index.html                        → ENTRÉE du site : le visiteur choisit « Ferme des 3 Rois » ou « Trésors de Beauce »
+ferme-des-3-rois.html             → Accueil Ferme des 3 Rois (professionnels) : hero, aperçu des 3 thèmes, galerie, contact
+tresors-de-beauce.html            → Accueil Trésors de Beauce (particuliers & épiceries) : même structure, textes orientés grand public
 la-ferme.html                     → Page « La Ferme » : Notre Histoire + Notre Engagement
 nos-produits.html                 → Page « Nos Produits » : céréales, légumineuses, graines, légumes
 recettes.html                     → Page « Recettes » : fiche cuisson + recettes salées/sucrées
 assets/css/style.css              → tous les styles (variables de marque en haut de fichier)
-assets/js/main.js                 → interactions (menu, onglets, accordéon, lightbox, formulaire)
+assets/js/main.js                 → interactions (menu, onglets, accordéon, lightbox, formulaire, liens de la marque active)
+assets/js/brand.js                → mémorise la marque choisie (Ferme des 3 Rois / Trésors de Beauce)
 assets/images/logo-*.jpg          → vos vrais logos (Ferme des 3 Rois / Trésors de Beauce)
+assets/images/logo-ferme-des-3-rois.png, logo-tresors-de-beauce.png → chaque logo isolé (header + écran d'entrée)
 assets/images/real/*.jpg          → vos vraies photos (extraites de vos documents + ancien site)
 assets/images/hero/*.jpg          → photos libres de droit du hero (voir « Crédits photo » ci-dessous)
 assets/images/placeholders/*.svg  → visuels de remplacement À REMPLACER par de vraies photos
@@ -19,7 +23,20 @@ scripts/                          → scripts utilitaires (génération des plac
 
 Le site est désormais **multi-pages** : chaque thème (La Ferme, Nos Produits, Recettes) a sa
 propre page HTML, reliée depuis le menu et depuis les 3 cartes d'aperçu de la page d'accueil.
-Seul « Où nous trouver / Contact » reste sur la page d'accueil (`index.html#contact`).
+« Où nous trouver / Contact » figure sur chacune des deux pages d'accueil de marque
+(`ferme-des-3-rois.html#contact` et `tresors-de-beauce.html#contact`).
+
+## Entrée du site et choix de la marque
+
+- `index.html` (adresse du site) affiche l'écran d'entrée : deux grands panneaux, **Ferme des 3 Rois**
+  (professionnels) et **Trésors de Beauce** (particuliers & épiceries). Un clic ouvre l'accueil de la marque.
+- Dans le header de toutes les pages, la barre verte « Nos deux marques » permet de basculer à tout moment
+  d'une marque à l'autre (onglet actif en blanc). Le pied de page propose aussi « Choisir une marque » (retour à l'entrée).
+- Les pages La Ferme, Nos Produits, Recettes et les pages légales sont **communes** aux deux marques : elles
+  reprennent le logo et les liens de la marque choisie en dernier (mémorisée 12 mois dans le navigateur, clé
+  `f3r_brand`, déclarée dans `politique-cookies.html`). Sans choix préalable : Ferme des 3 Rois.
+- À valider avec le client : les textes de `tresors-de-beauce.html` (titre, accroche, chapô) sont une première
+  rédaction reprise des contenus existants.
 
 Pour prévisualiser le site en local : ouvrez un terminal dans ce dossier puis lancez
 `python3 -m http.server 8080` et ouvrez `http://localhost:8080`.
@@ -96,7 +113,9 @@ hébergeur / registrar, en deux temps :
 Le site a été volontairement conçu simple à recréer avec un page builder (Elementor, Divi,
 Bricks…). Sa structure multi-pages colle d'ailleurs directement au fonctionnement de WordPress :
 créez une page « La Ferme », une page « Nos Produits », une page « Recettes », et gardez « Où
-nous trouver » comme section de la page d'accueil — exactement l'arborescence de ce dossier.
+nous trouver » comme section de chaque page d'accueil de marque — exactement l'arborescence de ce dossier.
+L'écran d'entrée (`index.html`) devient la page d'accueil du site avec deux gros boutons/blocs
+vers les deux accueils ; le sélecteur de marque du header se recrée avec un menu à deux liens.
 
 - **Couleurs et polices** : toutes les valeurs de marque sont en haut de `assets/css/style.css`
   (section « Variables de marque ») — à reporter dans les réglages globaux du thème.
@@ -112,7 +131,7 @@ nous trouver » comme section de la page d'accueil — exactement l'arborescence
 - **Galerie + lightbox** → widget "Gallery" natif (lightbox intégrée).
 - **Formulaire de contact** → Contact Form 7 ou WPForms, à styliser avec les mêmes couleurs.
 - La Ferme, Nos Produits et Recettes sont chacune une page WordPress à part entière ;
-  « Où nous trouver » (04) reste une section de la page d'accueil.
+  « Où nous trouver » (04) reste une section de chaque page d'accueil de marque.
 
 
 ## Conformité légale (à finir avant la mise en ligne)

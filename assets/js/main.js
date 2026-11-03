@@ -6,6 +6,18 @@
 
 document.addEventListener('DOMContentLoaded', function () {
 
+  /* ---------- Marque active (Ferme des 3 Rois / Trésors de Beauce) ----------
+     <html data-brand> est posé par brand.js. Les pages internes pointent vers
+     l'accueil de la marque choisie ; le sélecteur du header marque l'onglet actif. */
+  var brand = document.documentElement.getAttribute('data-brand') === 'tresors' ? 'tresors' : 'ferme';
+  var BRAND_HOME = { ferme: 'ferme-des-3-rois.html', tresors: 'tresors-de-beauce.html' };
+  document.querySelectorAll('[data-brand-home]').forEach(function(a){
+    a.setAttribute('href', BRAND_HOME[brand] + a.getAttribute('data-brand-home'));
+  });
+  document.querySelectorAll('[data-brand-tab]').forEach(function(tab){
+    if (tab.getAttribute('data-brand-tab') === brand) tab.setAttribute('aria-current', 'true');
+  });
+
   /* ---------- Header : fond au scroll + menu mobile ---------- */
   var header = document.getElementById('siteHeader');
   var navToggle = document.getElementById('navToggle');
@@ -206,7 +218,7 @@ document.addEventListener('DOMContentLoaded', function () {
       var target = document.querySelector(id);
       if (!target) return;
       e.preventDefault();
-      var offset = target.getBoundingClientRect().top + window.scrollY - 84;
+      var offset = target.getBoundingClientRect().top + window.scrollY - 116; // barre de marques + header compact
       window.scrollTo({ top: offset, behavior: 'smooth' });
     });
   });

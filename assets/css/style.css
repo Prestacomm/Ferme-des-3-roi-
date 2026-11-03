@@ -118,12 +118,12 @@ section{padding:112px 0;position:relative;}
 /* ---------- 4. Header ---------- */
 .site-header{
   position:fixed;top:0;left:0;right:0;z-index:100;
-  padding:14px 0;
   background:linear-gradient(180deg, rgba(20,19,12,.42) 0%, rgba(20,19,12,.08) 100%);
-  transition:background .3s ease, box-shadow .3s ease, padding .3s ease;
+  transition:background .3s ease, box-shadow .3s ease;
 }
-.site-header .container{display:flex;align-items:center;justify-content:space-between;gap:24px;}
-.site-header.is-scrolled{background:rgba(251,246,238,.97);border-bottom:1px solid rgba(38,35,29,.1);padding:8px 0;}
+.site-header .container{display:flex;align-items:center;justify-content:space-between;gap:24px;padding-top:14px;padding-bottom:14px;transition:padding .3s ease;}
+.site-header.is-scrolled{background:rgba(251,246,238,.97);border-bottom:1px solid rgba(38,35,29,.1);}
+.site-header.is-scrolled .container{padding-top:8px;padding-bottom:8px;}
 
 .brand{display:flex;align-items:center;gap:12px;}
 .brand img{height:64px;width:auto;transition:height .3s ease, filter .3s ease;filter:drop-shadow(0 3px 10px rgba(0,0,0,.35));}
@@ -641,12 +641,99 @@ section{padding:112px 0;position:relative;}
 .brand-card__body p{color:rgba(255,255,255,.88);font-size:.95rem;max-width:44ch;margin-bottom:24px;}
 
 /* ============================================================
+   20. Deux marques : sélecteur dans le header + écran d'entrée
+   La marque active est portée par <html data-brand="ferme|tresors"> (assets/js/brand.js).
+   ============================================================ */
+.brand-switch{background:var(--green-900);color:#fff;}
+.brand-switch__wrap{max-width:var(--container);margin:0 auto;padding:0 24px;height:38px;display:flex;align-items:center;justify-content:space-between;gap:16px;}
+.brand-switch__label{font-size:.7rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.7);}
+.brand-switch__tabs{display:flex;gap:4px;}
+.brand-switch__tabs a{
+  display:inline-flex;align-items:baseline;gap:8px;padding:5px 16px;border-radius:100px;
+  font-size:.82rem;font-weight:500;color:rgba(255,255,255,.85);white-space:nowrap;
+  transition:background .2s ease, color .2s ease;
+}
+.brand-switch__tabs a small{font-size:.7rem;font-weight:400;opacity:.75;}
+.brand-switch__tabs a:hover{background:rgba(255,255,255,.16);color:#fff;}
+html[data-brand="ferme"] .brand-switch a[data-brand-tab="ferme"],
+html[data-brand="tresors"] .brand-switch a[data-brand-tab="tresors"]{background:#fff;color:var(--green-900);}
+@media (max-width:720px){
+  .brand-switch__wrap{padding:0 12px;height:40px;}
+  .brand-switch__label,.brand-switch__tabs a small{display:none;}
+  .brand-switch__tabs{width:100%;}
+  .brand-switch__tabs a{flex:1;justify-content:center;padding:6px 8px;font-size:.78rem;}
+}
+
+/* Logos du header : un seul visible selon la marque active (pages internes) */
+html:not([data-brand="tresors"]) .brand__logo--tresors,
+html[data-brand="tresors"] .brand__logo--ferme{display:none;}
+
+/* Photo du hero Trésors de Beauce (graines sur fond clair) : voile plus dense pour garder le texte lisible */
+html[data-brand="tresors"] .scroll-hero__gradient{
+  background:linear-gradient(180deg, rgba(20,19,12,.66) 0%, rgba(20,19,12,.72) 50%, rgba(20,19,12,.94) 100%);
+}
+
+/* Écran d'entrée (index.html) */
+.gate{min-height:100vh;min-height:100svh;display:flex;flex-direction:column;background:var(--cream);}
+.gate__bar{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:24px;max-width:var(--container);width:100%;margin:0 auto;padding:16px 24px;}
+.gate__bar .gate__logo img{height:54px;width:auto;}
+.gate__bar .gate__ab{justify-self:end;}
+.gate__bar .gate__ab img{height:54px;width:auto;border-radius:6px;}
+.gate__title{text-align:center;}
+.gate__title h1{font-size:clamp(1.5rem,3vw,2.3rem);font-weight:300;}
+.gate__title p{font-size:.88rem;margin-top:4px;}
+@media (max-width:760px){
+  .gate__bar{grid-template-columns:auto 1fr;gap:16px;padding:12px 16px;}
+  .gate__bar .gate__logo img{height:44px;}
+  .gate__bar .gate__ab{display:none;}
+  .gate__title{text-align:right;}
+  .gate__title p{display:none;}
+}
+
+.gate__panels{position:relative;flex:1;display:grid;grid-template-columns:1fr 1fr;min-height:520px;}
+@media (max-width:760px){.gate__panels{grid-template-columns:1fr;min-height:0;}}
+.gate-panel{
+  position:relative;display:flex;flex-direction:column;justify-content:space-between;gap:48px;
+  padding:clamp(24px,4vw,56px);color:#fff;background-color:var(--green-900);
+  background-image:linear-gradient(180deg, rgba(20,28,10,.45) 0%, rgba(20,28,10,.36) 40%, rgba(20,28,10,.92) 100%), var(--panel-img);
+  background-size:cover;background-position:center;
+}
+.gate-panel__logo{align-self:flex-start;background:var(--cream);border-radius:var(--radius-md);padding:14px 22px;}
+.gate-panel__logo img{height:72px;width:auto;}
+.gate-panel__kicker{
+  display:inline-block;background:var(--white);color:var(--green-900);border-radius:100px;
+  padding:7px 16px;font-size:.72rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;margin-bottom:18px;
+}
+.gate-panel h2{color:#fff;font-weight:300;font-size:clamp(2.2rem,4.4vw,3.6rem);letter-spacing:-0.015em;margin-bottom:14px;}
+.gate-panel p{color:rgba(255,255,255,.88);font-size:1rem;max-width:42ch;margin-bottom:28px;}
+/* tout le panneau est cliquable (lien étiré sur le titre) */
+.gate-panel__link::after{content:"";position:absolute;top:0;right:0;bottom:0;left:0;z-index:1;}
+.gate-panel__link:focus-visible{outline:none;}
+.gate-panel__link:focus-visible::after{outline:3px solid #fff;outline-offset:-8px;}
+.gate-panel__cta{display:inline-flex;}
+.gate-panel:hover .gate-panel__cta{background:var(--kraft-100);}
+.gate__or{
+  position:absolute;z-index:2;left:50%;top:50%;transform:translate(-50%,-50%);
+  width:64px;height:64px;border-radius:50%;background:var(--cream);color:var(--green-900);
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--font-display);font-style:italic;font-weight:300;font-size:1.3rem;
+}
+@media (max-width:760px){
+  .gate-panel{min-height:46svh;gap:20px;padding:20px;}
+  .gate-panel__logo{padding:10px 16px;}
+  .gate-panel__logo img{height:44px;}
+  .gate-panel p{font-size:.92rem;margin-bottom:20px;}
+}
+.gate__foot{padding:18px 0;}
+.gate__foot .footer-bottom{border-top:none;padding-top:0;}
+
+/* ============================================================
    19. Conformité : consentement, accessibilité
    ============================================================ */
 .skip-link{position:absolute;left:12px;top:-60px;z-index:2000;background:var(--green-900);color:#fff;padding:12px 18px;border-radius:100px;font-weight:600;}
 .skip-link:focus{top:12px;}
 :focus-visible{outline:3px solid var(--france-blue);outline-offset:3px;}
-.site-footer :focus-visible,.page-cta :focus-visible,.brands-strip :focus-visible,.harvest :focus-visible,
+.site-footer :focus-visible,.page-cta :focus-visible,.brands-strip :focus-visible,.harvest :focus-visible,.brand-switch :focus-visible,.gate-panel :focus-visible,
 .page-header :focus-visible,.scroll-hero :focus-visible,.elastic-item:focus-visible,.consent :focus-visible{outline-color:#fff;}
 .consent :focus-visible{outline-color:var(--france-blue);}
 .radio-group{border:none;padding:0;}

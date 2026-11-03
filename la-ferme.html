@@ -15,6 +15,7 @@
 <meta property="og:url" content="https://www.fermedes3rois.com/la-ferme.html">
 <meta property="og:image" content="https://www.fermedes3rois.com/assets/images/real/ferme-de-loin.jpg">
 <meta name="twitter:card" content="summary_large_image">
+<script src="assets/js/brand.js"></script>
 <link rel="preload" href="assets/fonts/work-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/css/fonts.css">
 <link rel="stylesheet" href="assets/css/style.css">
@@ -26,23 +27,33 @@
      HEADER
      ========================================================== -->
 <header class="site-header" id="siteHeader">
+  <div class="brand-switch">
+    <div class="brand-switch__wrap">
+      <span class="brand-switch__label">Nos deux marques</span>
+      <nav class="brand-switch__tabs" aria-label="Choisir la marque">
+        <a href="ferme-des-3-rois.html" data-brand-tab="ferme"><span>Ferme des 3 Rois</span> <small>Professionnels</small></a>
+        <a href="tresors-de-beauce.html" data-brand-tab="tresors"><span>Trésors de Beauce</span> <small>Particuliers</small></a>
+      </nav>
+    </div>
+  </div>
   <div class="container">
-    <a href="index.html" class="brand">
-      <img src="assets/images/logo-horizontal.png" alt="Ferme des 3 Rois — Trésors de Beauce">
+    <a href="ferme-des-3-rois.html" class="brand" data-brand-home="">
+      <img class="brand__logo brand__logo--ferme" src="assets/images/logo-ferme-des-3-rois.png" alt="Ferme des 3 Rois">
+      <img class="brand__logo brand__logo--tresors" src="assets/images/logo-tresors-de-beauce.png" alt="Trésors de Beauce">
     </a>
 
     <nav class="main-nav" id="mainNav">
       <a href="la-ferme.html">La Ferme</a>
       <a href="nos-produits.html">Nos Produits</a>
       <a href="recettes.html">Recettes</a>
-      <a href="index.html#contact">Où nous trouver</a>
+      <a href="ferme-des-3-rois.html#contact" data-brand-home="#contact">Où nous trouver</a>
     </nav>
 
     <div class="header-cta">
       <div class="ab-chip">
         <img src="assets/images/logo-ab.jpg" alt="Logo Agriculture Biologique" width="40" height="56">
       </div>
-      <a href="index.html#contact" class="btn btn-primary btn-sm">Nous contacter</a>
+      <a href="ferme-des-3-rois.html#contact" data-brand-home="#contact" class="btn btn-primary btn-sm">Nous contacter</a>
       <button class="nav-toggle" id="navToggle" aria-label="Ouvrir le menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
@@ -255,15 +266,16 @@
           <li><a href="la-ferme.html">La Ferme</a></li>
           <li><a href="nos-produits.html">Nos Produits</a></li>
           <li><a href="recettes.html">Recettes</a></li>
-          <li><a href="index.html#contact">Où nous trouver</a></li>
+          <li><a href="ferme-des-3-rois.html#contact" data-brand-home="#contact">Où nous trouver</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h2>Nos marques</h2>
         <ul>
-          <li><a href="index.html">Ferme des 3 Rois</a></li>
-          <li><a href="index.html">Trésors de Beauce</a></li>
-          <li><a href="index.html#contact">Tarifs professionnels</a></li>
+          <li><a href="ferme-des-3-rois.html">Ferme des 3 Rois</a></li>
+          <li><a href="tresors-de-beauce.html">Trésors de Beauce</a></li>
+          <li><a href="ferme-des-3-rois.html#contact">Tarifs professionnels</a></li>
+          <li><a href="index.html">Choisir une marque</a></li>
         </ul>
       </div>
       <div class="footer-col">
