@@ -6,7 +6,7 @@
 index.html                        → ENTRÉE du site : le visiteur choisit « Ferme des 3 Rois » ou « Trésors de Beauce »
 ferme-des-3-rois.html             → Accueil Ferme des 3 Rois (professionnels) : hero, aperçu des 3 thèmes, galerie, contact
 tresors-de-beauce.html            → Accueil Trésors de Beauce (particuliers & épiceries) : même structure, textes orientés grand public
-la-ferme.html                     → Page « La Ferme » : Notre Histoire + Notre Engagement
+la-ferme.html                     → Page « La Ferme » : Notre Histoire + Nos Engagements
 nos-produits.html                 → Page « Nos Produits » : céréales, légumineuses, graines, légumes
 recettes.html                     → Page « Recettes » : fiche cuisson + recettes salées/sucrées
 assets/css/style.css              → tous les styles (variables de marque en haut de fichier)
@@ -48,7 +48,7 @@ site tresorsdebeauce.com (`assets/images/real/`) :
 
 - **`histoire-portrait.jpg`** (ex `tdb-engagement-1.jpg`) — vraie photo couleur de Jérémy et
   Jonathan dans un champ. Utilisée dans « Notre Histoire », la galerie, et la carte « Bio &
-  certifications » de Notre Engagement.
+  certifications » de Nos Engagements.
 - **`histoire-batiment.jpg`** (ex `tdb-corps-ferme.jpg`) — vraie photo du corps de ferme avec
   le clocher du Puiset. Utilisée en bannière de « Recettes » et dans la galerie.
 - **`tdb-engagement-2.jpg`** — la chaîne de tri à la ferme (maïs). Carte « Circuit local ».
