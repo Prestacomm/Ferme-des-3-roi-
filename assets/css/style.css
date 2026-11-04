@@ -630,7 +630,7 @@ section{padding:112px 0;position:relative;}
   position:relative;min-height:440px;border-radius:var(--radius-lg);overflow:hidden;
   display:flex;flex-direction:column;justify-content:flex-end;padding:30px;
   background-color:var(--green-900);
-  background-image:linear-gradient(180deg, rgba(20,28,10,.35) 0%, rgba(20,28,10,.15) 35%, rgba(20,28,10,.88) 100%), var(--brand-img);
+  background-image:linear-gradient(180deg, rgba(20,28,10,.35) 0%, rgba(20,28,10,.34) 30%, rgba(20,28,10,.92) 100%), var(--brand-img);
   background-size:cover;background-position:center;
 }
 .brand-card__body h3{color:#fff;font-weight:300;font-size:clamp(1.9rem,3vw,2.5rem);letter-spacing:-0.015em;margin-bottom:12px;}
@@ -776,3 +776,140 @@ html[data-brand="tresors"] .scroll-hero__gradient{
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
 .histoire-title{font-size:clamp(1.25rem,2.4vw,1.6rem);font-weight:400;}
 .recipe-feature h2{color:#fff;font-size:1.7rem;margin-bottom:12px;font-weight:400;}
+
+/* ============================================================
+   21. Responsive : tablette et téléphone
+   Placé en dernier pour surcharger les règles de base : texte lisible,
+   zones de clic d'au moins 44px, hero qui tient dans l'écran, aucun débordement.
+   ============================================================ */
+
+/* Tablette (jusqu'à 1100px) */
+@media (max-width:1100px){
+  .engagement-grid{grid-template-columns:1fr 1fr;}
+}
+@media (max-width:1024px){
+  section{padding:88px 0;}
+  .container,.brand-switch__wrap{padding-left:28px;padding-right:28px;}
+  .page-header{padding-top:176px;}
+  .histoire{gap:44px;}
+  .theme-feature{gap:40px;}
+  .page-cta{padding:64px 48px;}
+  .harvest{padding:56px 36px 48px;}
+  .contact-card{padding:32px;}
+  .recipe-feature .body{padding:36px;}
+  .tab-btn{padding:12px 24px;}
+}
+
+/* Grille de la fiche cuisson : les colonnes peuvent rétrécir (évite le débordement) */
+.recipe-feature{grid-template-columns:minmax(0,1fr) minmax(0,1fr);}
+.recipe-feature > *{min-width:0;}
+@media (max-width:760px){.recipe-feature{grid-template-columns:minmax(0,1fr);}}
+
+/* Entrée sur tablette : textes réservés sur 4 lignes pour aligner les deux logos */
+@media (min-width:761px) and (max-width:1100px){
+  .gate-panel p{min-height:calc(4 * 1.6em);}
+}
+
+/* Téléphone (jusqu'à 720px) */
+@media (max-width:720px){
+  .container{padding-left:20px;padding-right:20px;}
+  .brand-switch__wrap{padding:0 10px;height:46px;}
+  .brand-switch__tabs a{padding:10px 8px;font-size:.86rem;}
+  .site-header .container{gap:12px;}
+  .nav-toggle{width:46px;height:46px;}
+  .main-nav{padding:40px 32px;gap:14px;}
+  .main-nav a{padding:10px 0;font-size:1.35rem;}
+  .btn{min-height:46px;padding:13px 24px;white-space:normal;text-align:center;}
+  .btn-sm{min-height:44px;}
+
+  .page-header{padding-top:164px;}
+  .section-head{margin-bottom:32px;}
+  .section-head p{font-size:1rem;}
+
+  /* hero : contenu compact, boutons pleine largeur */
+  .scroll-hero .hero-content{left:20px;right:20px;padding-bottom:36px;}
+  .scroll-hero h1{font-size:clamp(2.3rem,10.4vw,3.2rem);}
+  .hero-lead{font-size:1rem;margin-top:14px;}
+  .hero-actions{flex-direction:column;align-items:stretch;gap:12px;margin-top:24px;}
+  .hero-actions .btn{width:100%;}
+  .hero-ab{margin-top:24px;padding-top:18px;}
+  .hero-ab-logo{width:46px;}
+  .scroll-hero__label h2{font-size:clamp(2rem,10vw,2.6rem);}
+
+  /* blocs de contenu */
+  .brands-strip{padding:64px 0;}
+  .brand-card{min-height:380px;padding:24px;}
+  .theme-feature .body p{font-size:1rem;}
+  .certif-row{gap:10px;}
+  .certif-badge{font-size:.82rem;padding:9px 16px;}
+  .cycle-steps li{padding:26px 22px 28px;}
+  .recipe-feature .body{padding:28px 22px;}
+  .recipe-feature h2{font-size:1.45rem;}
+  .page-cta{padding:44px 22px;margin-top:56px;}
+  .page-cta__actions{width:100%;}
+  .page-cta__actions .btn{flex:1 1 100%;}
+  .harvest{padding:44px 20px 40px;}
+  .product-card p{font-size:.88rem;}
+  .product-card .cook-time{font-size:.78rem;}
+
+  /* onglets : grille 2 colonnes, bien cliquables */
+  .tabs-bar{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:28px;}
+  .tab-btn{padding:12px 8px;min-height:46px;font-size:.92rem;text-align:center;}
+
+  /* contact et formulaire (16px : évite le zoom automatique d'iOS au clic) */
+  .contact-card{padding:24px 20px;}
+  .store-finder{padding:6px;}
+  .accordion-trigger{padding:18px;min-height:56px;}
+  .field input,.field select,.field textarea{font-size:16px;padding:14px 20px;}
+  .field label,.radio-group legend{font-size:.9rem;}
+  .radio-group{flex-direction:column;gap:2px;}
+  .radio-group label{min-height:44px;font-size:.95rem;}
+  .radio-group input{width:22px;height:22px;accent-color:var(--green-700);flex-shrink:0;}
+  .social-btn{padding:13px 22px;font-size:.92rem;}
+
+  /* pied de page */
+  .site-footer{padding:56px 0 24px;}
+  .footer-col li{margin-bottom:0;}
+  .footer-col a{display:inline-block;padding:7px 0;}
+  .footer-bottom{flex-direction:column;gap:6px;font-size:.82rem;}
+  .footer-legal a,.footer-legal .link-btn{display:inline-block;padding:6px 0;}
+
+  /* bandeau cookies plus compact */
+  .consent{padding:18px 16px;}
+  .consent h2{font-size:1.1rem;}
+  .consent p{font-size:.84rem;margin-bottom:12px;}
+  .consent__actions .btn{flex:1 1 130px;padding:12px 14px;}
+
+  /* entrée du site */
+  .gate__title h1{font-size:1.4rem;}
+}
+
+/* Catalogue produits : 2 colonnes sur téléphone (moitié moins de défilement) */
+@media (max-width:460px){
+  .product-grid{grid-template-columns:1fr 1fr;gap:12px;}
+  .product-card .body{padding:12px 12px 16px;}
+  .product-card h3{font-size:.95rem;}
+  .product-card p{font-size:.82rem;}
+  .product-card .cook-time{top:8px;right:8px;padding:4px 9px;font-size:.74rem;}
+}
+
+/* Petits téléphones (jusqu'à 380px) */
+@media (max-width:380px){
+  .scroll-hero h1{font-size:2rem;}
+  .brand-switch__tabs a{font-size:.8rem;padding:10px 4px;}
+  .gate-panel__logo img{height:72px;}
+  .page-header h1{font-size:2rem;}
+}
+
+/* Téléphone en paysage : header et hero plus bas pour garder la place utile */
+@media (max-height:540px) and (max-width:960px){
+  .brand-switch__wrap{height:34px;}
+  .brand img{height:38px;}
+  .site-header .container{padding-top:8px;padding-bottom:8px;}
+  .scroll-hero h1{font-size:1.9rem;}
+  .hero-lead{font-size:.95rem;margin-top:10px;}
+  .hero-actions{flex-direction:row;margin-top:14px;}
+  .hero-actions .btn{width:auto;min-height:42px;padding:10px 20px;}
+  .hero-ab{display:none;}
+  .scroll-hero .hero-content{padding-bottom:20px;}
+}
