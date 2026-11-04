@@ -4,8 +4,8 @@
 
 ```
 index.html                        → ENTRÉE du site : le visiteur choisit « Ferme des 3 Rois » ou « Trésors de Beauce »
-ferme-des-3-rois.html             → Accueil Ferme des 3 Rois (professionnels) : hero, aperçu des 3 thèmes, galerie, contact
-tresors-de-beauce.html            → Accueil Trésors de Beauce (particuliers & épiceries) : même structure, textes orientés grand public
+ferme-des-3-rois.html             → Accueil Ferme des 3 Rois : hero, aperçu des 3 thèmes, galerie, contact
+tresors-de-beauce.html            → Accueil Trésors de Beauce : même structure, hero et textes propres à la marque
 la-ferme.html                     → Page « La Ferme » : Notre Histoire + Nos Engagements
 nos-produits.html                 → Page « Nos Produits » : céréales, légumineuses, graines, légumes
 recettes.html                     → Page « Recettes » : fiche cuisson + recettes salées/sucrées
@@ -29,7 +29,9 @@ propre page HTML, reliée depuis le menu et depuis les 3 cartes d'aperçu de la 
 ## Entrée du site et choix de la marque
 
 - `index.html` (adresse du site) affiche l'écran d'entrée : deux grands panneaux, **Ferme des 3 Rois**
-  (professionnels) et **Trésors de Beauce** (particuliers & épiceries). Un clic ouvre l'accueil de la marque.
+  et **Trésors de Beauce**. Un clic ouvre l'accueil de la marque. Volontairement, aucune mention
+  « professionnels » ou « particuliers » : Ferme des 3 Rois est la marque des grandes surfaces, Trésors de
+  Beauce celle des épiceries fines et magasins bio, ce n'est donc pas une séparation pro / particuliers.
 - Dans le header de toutes les pages, la barre verte « Nos deux marques » permet de basculer à tout moment
   d'une marque à l'autre (onglet actif en blanc). Le pied de page propose aussi « Choisir une marque » (retour à l'entrée).
 - Les pages La Ferme, Nos Produits, Recettes et les pages légales sont **communes** aux deux marques : elles

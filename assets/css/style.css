@@ -628,14 +628,10 @@ section{padding:112px 0;position:relative;}
 @media (max-width:760px){.brands-pair{grid-template-columns:1fr;}}
 .brand-card{
   position:relative;min-height:440px;border-radius:var(--radius-lg);overflow:hidden;
-  display:flex;flex-direction:column;justify-content:space-between;padding:30px;
+  display:flex;flex-direction:column;justify-content:flex-end;padding:30px;
   background-color:var(--green-900);
   background-image:linear-gradient(180deg, rgba(20,28,10,.35) 0%, rgba(20,28,10,.15) 35%, rgba(20,28,10,.88) 100%), var(--brand-img);
   background-size:cover;background-position:center;
-}
-.brand-card__kicker{
-  align-self:flex-start;background:var(--white);color:var(--green-900);border-radius:100px;
-  padding:7px 16px;font-size:.72rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;
 }
 .brand-card__body h3{color:#fff;font-weight:300;font-size:clamp(1.9rem,3vw,2.5rem);letter-spacing:-0.015em;margin-bottom:12px;}
 .brand-card__body p{color:rgba(255,255,255,.88);font-size:.95rem;max-width:44ch;margin-bottom:24px;}
@@ -653,13 +649,12 @@ section{padding:112px 0;position:relative;}
   font-size:.82rem;font-weight:500;color:rgba(255,255,255,.85);white-space:nowrap;
   transition:background .2s ease, color .2s ease;
 }
-.brand-switch__tabs a small{font-size:.7rem;font-weight:400;opacity:.75;}
 .brand-switch__tabs a:hover{background:rgba(255,255,255,.16);color:#fff;}
 html[data-brand="ferme"] .brand-switch a[data-brand-tab="ferme"],
 html[data-brand="tresors"] .brand-switch a[data-brand-tab="tresors"]{background:#fff;color:var(--green-900);}
 @media (max-width:720px){
   .brand-switch__wrap{padding:0 12px;height:40px;}
-  .brand-switch__label,.brand-switch__tabs a small{display:none;}
+  .brand-switch__label{display:none;}
   .brand-switch__tabs{width:100%;}
   .brand-switch__tabs a{flex:1;justify-content:center;padding:6px 8px;font-size:.78rem;}
 }
@@ -692,21 +687,17 @@ html[data-brand="tresors"] .scroll-hero__gradient{
 
 .gate__panels{position:relative;flex:1;display:grid;grid-template-columns:1fr 1fr;min-height:520px;}
 @media (max-width:760px){.gate__panels{grid-template-columns:1fr;min-height:0;}}
+/* Le logo est l'élément principal du panneau ; la photo reste en fond, fortement assombrie. */
 .gate-panel{
-  position:relative;display:flex;flex-direction:column;justify-content:space-between;gap:48px;
+  position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:32px;
   padding:clamp(24px,4vw,56px);color:#fff;background-color:var(--green-900);
-  background-image:linear-gradient(180deg, rgba(20,28,10,.45) 0%, rgba(20,28,10,.36) 40%, rgba(20,28,10,.92) 100%), var(--panel-img);
+  background-image:linear-gradient(180deg, rgba(20,28,10,.74) 0%, rgba(20,28,10,.82) 100%), var(--panel-img);
   background-size:cover;background-position:center;
 }
-.gate-panel__logo{align-self:flex-start;background:var(--cream);border-radius:var(--radius-md);padding:14px 22px;}
-.gate-panel__logo img{height:72px;width:auto;}
-.gate-panel__kicker{
-  display:inline-block;background:var(--white);color:var(--green-900);border-radius:100px;
-  padding:7px 16px;font-size:.72rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;margin-bottom:18px;
-}
-.gate-panel h2{color:#fff;font-weight:300;font-size:clamp(2.2rem,4.4vw,3.6rem);letter-spacing:-0.015em;margin-bottom:14px;}
-.gate-panel p{color:rgba(255,255,255,.88);font-size:1rem;max-width:42ch;margin-bottom:28px;}
-/* tout le panneau est cliquable (lien étiré sur le titre) */
+.gate-panel__logo{background:var(--cream);border-radius:var(--radius-lg);padding:clamp(22px,2.6vw,36px) clamp(30px,4vw,56px);}
+.gate-panel__logo img{height:clamp(104px,15vw,190px);width:auto;}
+.gate-panel p{color:rgba(255,255,255,.9);font-size:1rem;max-width:40ch;margin:0 auto 28px;}
+/* tout le panneau est cliquable (lien étiré sur le bouton « Entrer ») */
 .gate-panel__link::after{content:"";position:absolute;top:0;right:0;bottom:0;left:0;z-index:1;}
 .gate-panel__link:focus-visible{outline:none;}
 .gate-panel__link:focus-visible::after{outline:3px solid #fff;outline-offset:-8px;}
@@ -719,10 +710,10 @@ html[data-brand="tresors"] .scroll-hero__gradient{
   font-family:var(--font-display);font-style:italic;font-weight:300;font-size:1.3rem;
 }
 @media (max-width:760px){
-  .gate-panel{min-height:46svh;gap:20px;padding:20px;}
-  .gate-panel__logo{padding:10px 16px;}
-  .gate-panel__logo img{height:44px;}
-  .gate-panel p{font-size:.92rem;margin-bottom:20px;}
+  .gate-panel{min-height:46svh;gap:18px;padding:20px;}
+  .gate-panel__logo{padding:14px 24px;border-radius:var(--radius-md);}
+  .gate-panel__logo img{height:84px;}
+  .gate-panel p{font-size:.92rem;margin-bottom:18px;}
 }
 .gate__foot{padding:18px 0;}
 .gate__foot .footer-bottom{border-top:none;padding-top:0;}

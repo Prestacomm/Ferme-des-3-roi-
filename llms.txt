@@ -1,13 +1,13 @@
 # Ferme des 3 Rois — Trésors de Beauce
 
-> Exploitation agricole familiale en agriculture biologique (142 hectares, certifiée AB) au Puiset, près de Janville-en-Beauce (Eure-et-Loir, 28), en Beauce. Elle produit et conditionne sur place des céréales, légumineuses, graines et légumes secs bio, vendus sous deux marques : « Ferme des 3 Rois » (vrac et sacs pour les professionnels : restaurateurs, collectivités, magasins) et « Trésors de Beauce » (sachets compostables de 400 g pour les particuliers et les épiceries).
+> Exploitation agricole familiale en agriculture biologique (142 hectares, certifiée AB) au Puiset, près de Janville-en-Beauce (Eure-et-Loir, 28), en Beauce. Elle produit et conditionne sur place des céréales, légumineuses, graines et légumes secs bio, vendus sous deux marques : « Ferme des 3 Rois » et « Trésors de Beauce » (sachets compostables de 400 g, en épiceries fines et magasins bio).
 
 Le site est un site vitrine : il n'y a pas de vente en ligne. Les commandes se font par téléphone ou par email.
 
 ## Pages principales
-- [Entrée du site](https://www.fermedes3rois.com/) : le visiteur choisit son univers, Ferme des 3 Rois (professionnels) ou Trésors de Beauce (particuliers et épiceries)
-- [Accueil Ferme des 3 Rois](https://www.fermedes3rois.com/ferme-des-3-rois.html) : vente directe aux professionnels, présentation des deux marques, galerie, points de vente et contact
-- [Accueil Trésors de Beauce](https://www.fermedes3rois.com/tresors-de-beauce.html) : gamme en sachets de 400 g pour les particuliers et les épiceries, galerie, points de vente et contact
+- [Entrée du site](https://www.fermedes3rois.com/) : le visiteur choisit son univers, Ferme des 3 Rois ou Trésors de Beauce
+- [Accueil Ferme des 3 Rois](https://www.fermedes3rois.com/ferme-des-3-rois.html) : présentation du groupe et des deux marques, galerie, points de vente et contact
+- [Accueil Trésors de Beauce](https://www.fermedes3rois.com/tresors-de-beauce.html) : gamme en sachets compostables de 400 g, galerie, points de vente et contact
 - [La Ferme](https://www.fermedes3rois.com/la-ferme.html) : histoire de la famille Desforges, valeurs, cycle agricole, chiffres de récolte
 - [Nos produits](https://www.fermedes3rois.com/nos-produits.html) : céréales, légumineuses (haricots, lentilles, pois), graines, légumes, avec temps de cuisson
 - [Recettes](https://www.fermedes3rois.com/recettes.html) : fiche temps de cuisson et 6 fiches recettes à télécharger (PDF)
